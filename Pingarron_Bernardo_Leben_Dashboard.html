@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bernardo Pingarron — Lebenslauf</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+@page{size:A4 portrait;margin:0;}
+@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}body{margin:0;background:white;padding:0;}.no-print{display:none;}}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --cream:#F4EFE4;--cream-mid:#EDE5D0;--cream-dark:#D9CEBC;
+  --forest:#2D5016;--forest-mid:#3D6B1F;--crimson:#7D1A1A;--gold:#B8922A;
+  --charcoal:#1A1A1A;--text-body:#2C2C2C;--text-sub:#4A4540;
+  --mid-gray:#6A6355;--light-gray:#9A9080;--pad:26px;
+}
+body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;align-items:center;padding:28px 0 48px;gap:14px;min-height:100vh;}
+.print-hint{background:var(--forest);color:var(--cream);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 20px;}
+.a4{width:794px;height:1123px;background:var(--cream);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 12px 56px rgba(0,0,0,.32);}
+@media print{.a4{width:210mm;height:297mm;box-shadow:none;}}
+.accent-bar{height:5px;background:linear-gradient(90deg,var(--forest) 55%,var(--crimson) 100%);flex-shrink:0;}
+
+/* Header */
+.header{display:grid;grid-template-columns:1fr 118px;align-items:center;padding:16px var(--pad) 13px;border-bottom:1.5px solid var(--forest);gap:14px;flex-shrink:0;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--crimson);margin-bottom:3px;}
+.name{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:.88;color:var(--charcoal);letter-spacing:-1.5px;}
+.name span{color:var(--forest);}
+.title-line{margin-top:7px;font-size:11px;color:var(--text-sub);}
+.title-line strong{color:var(--forest-mid);font-weight:500;}
+.contact-row{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px 16px;}
+.c-item{display:flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text-sub);text-decoration:none;}
+.c-item svg{width:10px;height:10px;fill:var(--forest);flex-shrink:0;}
+.photo-wrap{width:108px;height:108px;border-radius:50%;border:2.5px solid var(--forest);box-shadow:5px 5px 0 var(--crimson);background:var(--cream-mid);display:flex;align-items:center;justify-content:center;justify-self:end;overflow:hidden;}
+.photo-wrap svg{width:56px;height:56px;fill:rgba(45,80,22,.22);}
+
+/* KPI */
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1.5px solid var(--forest);flex-shrink:0;}
+.kpi-cell{padding:8px var(--pad) 7px;border-right:1px solid var(--cream-dark);display:flex;flex-direction:column;gap:2px;}
+.kpi-cell:last-child{border-right:none;}
+.kpi-num{font-family:'Playfair Display',serif;font-size:27px;font-weight:900;color:var(--forest);line-height:1;display:flex;align-items:baseline;gap:2px;}
+.kpi-unit{font-family:'DM Mono',monospace;font-size:13px;color:var(--crimson);font-weight:500;}
+.kpi-lbl{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--charcoal);margin-top:2px;}
+.kpi-sub{font-size:10px;color:var(--text-sub);font-weight:400;}
+
+/* Über mich */
+.uber-band{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--forest);flex-shrink:0;}
+.uber-cell{padding:9px var(--pad);border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:2px;}
+.uber-cell:last-child{border-right:none;}
+.uber-lbl{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.45);}
+.uber-val{font-size:11px;color:var(--cream);line-height:1.5;}
+.uber-val strong{color:#A8D070;font-weight:500;}
+
+/* Section labels */
+.sec-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--crimson);margin-bottom:1px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--charcoal);padding-bottom:5px;border-bottom:1px solid var(--cream-dark);margin-bottom:4px;}
+
+/* PIP BAND */
+.pip-band{flex-shrink:0;padding:8px var(--pad) 0;border-bottom:1.5px solid var(--cream-dark);}
+.pip-band-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+.pip-band-subtitle{font-family:'DM Mono',monospace;font-size:7.5px;color:var(--light-gray);letter-spacing:.5px;}
+.pip-row-wrap{display:flex;align-items:stretch;margin-bottom:8px;}
+.pip-half{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0;}
+.pip-half-lbl{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mid-gray);padding-bottom:3px;border-bottom:1px dotted var(--cream-dark);}
+.pip-half-sep{width:1px;background:var(--cream-dark);margin:0 10px;flex-shrink:0;}
+.pip-cols{display:flex;gap:0;align-items:flex-start;margin-top:4px;}
+.pip-col{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;min-width:0;}
+.pip-col-name{font-family:'DM Mono',monospace;font-size:8px;color:var(--text-sub);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;}
+.pip-2x5{display:grid;grid-template-columns:repeat(5,9px);grid-template-rows:repeat(2,9px);gap:2.5px;}
+.p{width:9px;height:9px;border-radius:1px;border:1.5px solid var(--cream-dark);background:transparent;}
+.p.cr{background:var(--crimson);border-color:var(--crimson);}
+.p.fo{background:var(--forest);border-color:var(--forest);}
+.p.go{background:var(--gold);border-color:var(--gold);}
+.p.la{background:var(--forest);border-color:var(--forest);border-radius:50%;}
+
+/* ATS block — two short lines, no orphan wrap */
+.ats-block{
+  font-family:'DM Mono',monospace;font-size:6.5px;color:var(--light-gray);
+  letter-spacing:.3px;padding:5px 0 8px;
+  border-top:1px dotted var(--cream-dark);line-height:1.8;
+}
+
+/* RADAR BAND */
+.radar-band{flex-shrink:0;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;border-bottom:1.5px solid var(--cream-dark);padding:8px 0 6px;}
+.radar-col{display:flex;flex-direction:column;align-items:center;padding:0 10px;gap:2px;}
+.radar-col-lbl{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-sub);text-align:center;margin-bottom:2px;}
+.radar-band-sep{background:var(--cream-dark);}
+
+/* BOTTOM SECTION */
+.bottom-cols{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0;}
+.bottom-left{border-right:1.5px solid var(--cream-dark);padding:11px var(--pad) 8px;}
+.bottom-right{padding:11px var(--pad) 8px;}
+
+/* Donut */
+.donut-section{display:flex;align-items:center;gap:16px;margin-top:5px;}
+.donut-wrap{position:relative;flex-shrink:0;}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;}
+.donut-center-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--charcoal);line-height:1;}
+.donut-center-lbl{font-family:'DM Mono',monospace;font-size:7px;letter-spacing:1px;color:var(--light-gray);text-transform:uppercase;margin-top:2px;}
+.icon-grid{display:flex;flex-direction:column;gap:8px;flex:1;}
+.icon-row{display:flex;align-items:center;gap:8px;}
+.icon-box{width:30px;height:30px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:2px;}
+.icon-box svg{width:15px;height:15px;}
+.icon-box.hospo{background:rgba(184,146,42,.13);}
+.icon-box.hospo svg{fill:var(--gold);}
+.icon-box.data{background:rgba(45,80,22,.12);}
+.icon-box.data svg{fill:var(--forest);}
+.icon-box.lang{background:rgba(125,26,26,.10);}
+.icon-box.lang svg{fill:var(--crimson);}
+.icon-info{display:flex;flex-direction:column;gap:1px;}
+.icon-domain{font-size:11px;font-weight:500;color:var(--charcoal);}
+.icon-sub{font-family:'DM Mono',monospace;font-size:8px;color:var(--mid-gray);}
+.icon-pct{margin-left:auto;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;flex-shrink:0;}
+.icon-pct.hospo{color:var(--gold);}
+.icon-pct.data{color:var(--forest);}
+.icon-pct.lang{color:var(--crimson);}
+
+/* Education */
+.edu-list{display:flex;flex-direction:column;gap:9px;margin-top:5px;}
+.edu-item{padding-left:9px;}
+.edu-item.fo{border-left:2.5px solid var(--forest);}
+.edu-item.go{border-left:2.5px solid var(--gold);}
+.edu-item.gr{border-left:2px solid var(--cream-dark);}
+.edu-name{font-size:11px;font-weight:500;color:var(--charcoal);}
+.edu-meta{font-family:'DM Mono',monospace;font-size:8.5px;margin-top:2px;}
+.edu-meta.cr{color:var(--crimson);}
+.edu-meta.go{color:var(--gold);}
+.edu-meta.gr{color:var(--mid-gray);}
+.edu-desc{font-size:10px;color:var(--text-sub);font-weight:300;line-height:1.45;margin-top:2px;}
+
+/* Timeline */
+.timeline-strip{flex-shrink:0;border-top:1.5px solid var(--forest);padding:7px var(--pad);background:var(--cream);}
+.timeline-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
+.tl-legend{display:flex;gap:14px;}
+.tl-legend-item{display:flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:8px;color:var(--text-sub);}
+.tl-legend-dot{width:8px;height:8px;border-radius:1px;}
+
+/* Bottom bar */
+.bottom-bar{background:var(--forest);padding:7px var(--pad);display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+.bottom-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:10px;color:var(--cream);opacity:.9;}
+.bottom-mono{font-family:'DM Mono',monospace;font-size:8px;color:var(--gold);letter-spacing:1px;}
+
+</style>
+</head>
+<body>
+
+
+<div class="a4">
+<div class="accent-bar"></div>
+
+<header class="header">
+  <div>
+    <div class="name">Bernardo <span>Pingarron</span></div>
+    <div class="title-line"><strong>Python · SQL · Power BI · Datenvisualisierung · ETL · Datenbereinigung</strong></div>
+    <div class="contact-row">
+
+      <span class="c-item"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>b.pingarron.c@gmail.com</span>
+      <span class="c-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>github.com/Stringsdaemon</span>
+      <span class="c-item"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Berlin, DE</span>
+    </div>
+  </div>
+
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi-cell"><div class="kpi-num">10<span class="kpi-unit">+</span></div><div class="kpi-lbl">Jahre Erfahrung</div><div class="kpi-sub">Gastronomie &amp; Hospitality</div></div>
+  <div class="kpi-cell"><div class="kpi-num">2<span class="kpi-unit">×</span></div><div class="kpi-lbl">Auszeichnungen</div><div class="kpi-sub">Mixology Awards 2023</div></div>
+  <div class="kpi-cell"><div class="kpi-num">3</div><div class="kpi-lbl">Sprachen</div><div class="kpi-sub">ES (nativ) · EN C2 · DE B2</div></div>
+  <div class="kpi-cell"><div class="kpi-num">6<span class="kpi-unit">+</span></div><div class="kpi-lbl">Stationen</div><div class="kpi-sub">London · Madrid · Berlin</div></div>
+</div>
+
+<div class="uber-band">
+  <div class="uber-cell"><div class="uber-lbl">Hintergrund</div><div class="uber-val">Über <strong>10 Jahre Gastronomie</strong> — von London über Madrid bis Berlin.</div></div>
+  <div class="uber-cell"><div class="uber-lbl">Fokus</div><div class="uber-val"><strong>Datenbereinigung, Visualisierung</strong> &amp; Prozessautomatisierung.</div></div>
+  <div class="uber-cell"><div class="uber-lbl">Antrieb</div><div class="uber-val">Komplexe Daten in <strong>handlungsrelevante Erkenntnisse</strong> übersetzen.</div></div>
+</div>
+
+<!-- // 001 Tool Set -->
+<div class="pip-band">
+  <div class="pip-band-header">
+    <div class="sec-label">// 001 · Tool Set</div>
+    <div class="pip-band-subtitle">Skala 0–10 · relativ zum Junior Data Analyst Niveau</div>
+  </div>
+  <div class="pip-row-wrap">
+    <div class="pip-half">
+      <div class="pip-half-lbl">Sprachen</div>
+      <div class="pip-cols">
+        <div class="pip-col"><div class="pip-col-name">Spanisch</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Englisch</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Deutsch</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p"></div><div class="p"></div></div></div>
+      </div>
+    </div>
+    <div class="pip-half-sep"></div>
+    <div class="pip-half">
+      <div class="pip-half-lbl">Visualisierung &amp; Reporting</div>
+      <div class="pip-cols">
+        <div class="pip-col"><div class="pip-col-name">Excel</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Power Query</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Power BI</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pip-row-wrap">
+    <div class="pip-half">
+      <div class="pip-half-lbl">Programmierung &amp; Analyse</div>
+      <div class="pip-cols">
+        <div class="pip-col"><div class="pip-col-name">Python</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">SQL</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">LLM Prompt.</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+      </div>
+    </div>
+    <div class="pip-half-sep"></div>
+    <div class="pip-half">
+      <div class="pip-half-lbl">Deployment &amp; Versionskontrolle</div>
+      <div class="pip-cols">
+        <div class="pip-col"><div class="pip-col-name">GitHub</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Streamlit</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Git CLI</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATS block: split into two short lines so neither wraps -->
+  <div class="ats-block">
+    Python · pandas · numpy · seaborn · matplotlib · SQL · Power BI · Excel · Power Query · Git · GitHub · Streamlit · LLM Prompting<br>
+    Datenbereinigung · Datenaufbereitung · Datenvisualisierung · ETL · KPI-Reporting · Dashboards · Datenmodellierung · Business Intelligence · API-Integration · Machine Learning
+  </div>
+</div>
+
+<!-- // 002 Kompetenz-Profile — radars -->
+<div class="radar-band">
+  <div class="radar-col">
+    <div class="sec-label" style="text-align:left;">// 002 · Kompetenz-Profile</div>
+    <div class="radar-col-lbl">Beruflich</div>
+    <canvas id="radarProf" width="230" height="168"></canvas>
+  </div>
+  <div class="radar-band-sep"></div>
+  <div class="radar-col">
+    <div class="radar-col-lbl" style="margin-top:20px;">Persönlich</div>
+    <canvas id="radarPers" width="230" height="168"></canvas>
+  </div>
+  <div class="radar-band-sep"></div>
+  <div class="radar-col">
+    <div class="radar-col-lbl" style="margin-top:20px;">Soft Skills</div>
+    <canvas id="radarSoft" width="230" height="168"></canvas>
+  </div>
+</div>
+
+<!-- // 003 + // 004 bottom columns -->
+<div class="bottom-cols">
+  <div class="bottom-left">
+    <div class="sec-label">// 003 · Erfahrungsprofil</div>
+    <div class="sec-title">Erfahrungsprofil</div>
+    <div class="donut-section">
+      <div class="donut-wrap">
+        <canvas id="donut" width="106" height="106"></canvas>
+        <div class="donut-center"><div class="donut-center-num">10+</div><div class="donut-center-lbl">Jahre</div></div>
+      </div>
+      <div class="icon-grid">
+        <div class="icon-row">
+          <div class="icon-box hospo"><svg viewBox="0 0 24 24"><path d="M20 3H4l8 9.46V19H8v2h8v-2h-4v-6.54L20 3zm-4.27 2L12 9.98 8.27 5h7.46z"/></svg></div>
+          <div class="icon-info"><div class="icon-domain">Gastronomie</div><div class="icon-sub">10 J. · 3 Städte · 6 Stationen</div></div>
+          <div class="icon-pct hospo">65%</div>
+        </div>
+        <div class="icon-row">
+          <div class="icon-box data"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+          <div class="icon-info"><div class="icon-domain">Data Analytics</div><div class="icon-sub">Laufend · DataCraft · DataCamp</div></div>
+          <div class="icon-pct data">20%</div>
+        </div>
+        <div class="icon-row">
+          <div class="icon-box lang"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div>
+          <div class="icon-info"><div class="icon-domain">Sprachen &amp; Kultur</div><div class="icon-sub">ES · EN C2 · DE B2 · (JP)</div></div>
+          <div class="icon-pct lang">15%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-right">
+    <div class="sec-label">// 004 · Bildung &amp; Zertifikate</div>
+    <div class="sec-title">Bildung &amp; Zertifikate</div>
+    <div class="edu-list">
+      <div class="edu-item fo"><div class="edu-name">DataCraft Academy — Data Analyst</div><div class="edu-meta cr">Abgeschlossen · Vollzeit · Remote, München</div><div class="edu-desc">Python, SQL, Power BI, Machine Learning</div></div>
+      <div class="edu-item go"><div class="edu-name">DataCamp Zertifikate</div><div class="edu-meta go">Laufend · datacamp.com</div><div class="edu-desc">Python · Pandas &amp; Datenbereinigung · SQL-Grundlagen</div></div>
+      <div class="edu-item gr"><div class="edu-name">Übers. &amp; Dolmetschen (ES/EN/DE/JP)</div><div class="edu-meta gr">2009–2013 · Univ. Complutense de Madrid · Ohne Abschluss</div></div>
+      <div class="edu-item gr"><div class="edu-name">Bachillerato (Abitur)</div><div class="edu-meta gr">2008 · CES Santiago Rusiñol, Aranjuez</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- // 005 Karriere-Timeline -->
+<div class="timeline-strip">
+  <div class="timeline-header">
+    <div class="sec-label">// 005 · Karriere-Timeline</div>
+    <div class="tl-legend">
+      <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#B8922A"></div>London</div>
+      <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#7D1A1A"></div>Berlin · Hospitality</div>
+      <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#2D5016"></div>Data Analytics</div>
+    </div>
+  </div>
+  <canvas id="timelineCanvas" width="738" height="156"></canvas>
+</div>
+
+<div class="bottom-bar">
+  <div class="bottom-quote">„Lass uns gemeinsam Großes schaffen."</div>
+  <div class="bottom-mono">Seite 1 / 2 · github.com/Stringsdaemon</div>
+</div>
+</div>
+
+<script>
+window.addEventListener('load', function () {
+
+/* ── Radar ────────────────────────────────────────────────── */
+function drawRadar(id, labels, values, stroke, fill) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = canvas.width, H = canvas.height;
+  var cx = W/2, cy = H/2 + 6, R = Math.min(W,H)/2 - 34;
+  var n = labels.length, a0 = -Math.PI/2, step = Math.PI*2/n;
+  function pt(i,p){var a=a0+i*step;return[cx+Math.cos(a)*R*p,cy+Math.sin(a)*R*p];}
+  function grid(){
+    [0.33,0.66,1].forEach(function(p){
+      ctx.beginPath();
+      for(var i=0;i<=n;i++){var xy=pt(i%n,p);i===0?ctx.moveTo(xy[0],xy[1]):ctx.lineTo(xy[0],xy[1]);}
+      ctx.closePath();ctx.strokeStyle='rgba(0,0,0,0.09)';ctx.lineWidth=p===1?1:0.7;ctx.stroke();
+    });
+    for(var i=0;i<n;i++){var xy=pt(i,1);ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(xy[0],xy[1]);ctx.strokeStyle='rgba(0,0,0,0.08)';ctx.lineWidth=0.7;ctx.stroke();}
+  }
+  function shape(p){
+    ctx.clearRect(0,0,W,H);grid();
+    ctx.beginPath();
+    for(var i=0;i<n;i++){var xy=pt(i,values[i]*p);i===0?ctx.moveTo(xy[0],xy[1]):ctx.lineTo(xy[0],xy[1]);}
+    ctx.closePath();ctx.fillStyle=fill;ctx.fill();ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();
+    for(var i=0;i<n;i++){var xy=pt(i,values[i]*p);ctx.beginPath();ctx.arc(xy[0],xy[1],3,0,Math.PI*2);ctx.fillStyle=stroke;ctx.fill();}
+    if(p>=1){
+      ctx.font='400 10px "DM Sans",sans-serif';ctx.fillStyle='#3A3530';
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      for(var i=0;i<n;i++){
+        var a=a0+i*step,lx=cx+Math.cos(a)*(R+20),ly=cy+Math.sin(a)*(R+17);
+        labels[i].split('\n').forEach(function(t,ti,arr){ctx.fillText(t,lx,ly+ti*11-(arr.length-1)*5.5);});
+      }
+    }
+  }
+  var dur=900,s=performance.now();
+  function anim(now){var p=Math.min((now-s)/dur,1);shape(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(anim);else shape(1);}
+  setTimeout(function(){requestAnimationFrame(anim);},400);
+}
+drawRadar('radarProf',['Anpassung','Innovation','Sozial','Unabhängig-\nkeit','Leistung'],[0.87,0.82,0.84,0.80,0.92],'#2D5016','rgba(45,80,22,0.14)');
+drawRadar('radarPers',['Empathie','Strategie','Lernbereit-\nschaft','Kreativ','Perspektive','Emotionale\nIntelligenz'],[0.93,0.83,0.91,0.86,0.81,0.89],'#7D1A1A','rgba(125,26,26,0.11)');
+drawRadar('radarSoft',['Problem-\nlösung','Teamführung','Workflow','Agilität','Anpassungs-\nfähigkeit'],[0.80,0.80,0.80,1.00,1.00],'#B8922A','rgba(184,146,42,0.13)');
+
+/* ── Donut ────────────────────────────────────────────────── */
+function drawDonut(){
+  var canvas=document.getElementById('donut');if(!canvas)return;
+  var ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height,cx=W/2,cy=H/2,R=42,thick=12;
+  var segs=[{pct:0.65,color:'#B8922A'},{pct:0.20,color:'#2D5016'},{pct:0.15,color:'#7D1A1A'}];
+  var gap=0.025,dur=1000,start=performance.now();
+  function draw(p){
+    ctx.clearRect(0,0,W,H);
+    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.strokeStyle='#EDE5D0';ctx.lineWidth=thick;ctx.stroke();
+    var angle=-Math.PI/2;
+    segs.forEach(function(seg){
+      var sweep=(seg.pct*Math.PI*2-gap)*p;
+      ctx.beginPath();ctx.arc(cx,cy,R,angle,angle+sweep);
+      ctx.strokeStyle=seg.color;ctx.lineWidth=thick;ctx.lineCap='butt';ctx.stroke();
+      angle+=seg.pct*Math.PI*2;
+    });
+  }
+  function anim(now){var p=Math.min((now-start)/dur,1);draw(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(anim);else draw(1);}
+  requestAnimationFrame(anim);
+}
+drawDonut();
+
+/* ════════════════════════════════════════════════════════════
+   TIMELINE — TWO-STEM LOLLIPOP DESIGN
+   
+   How it works (matching the user's sketch):
+   
+   STEM 1 (vertical): rises from the axis UP (row 0) or drops DOWN
+   (row 1), ending at a filled circle — the lollipop dot.
+   Height is STAGGERED per role so labels at different levels
+   don't collide with each other.
+   
+   STEM 2 (horizontal): starts at the CENTER of that dot and
+   extends RIGHTWARD. Its length encodes the DURATION of the
+   role (longer role = longer bar). This is the "duration bar"
+   from the original sketch.
+   
+   Labels (role name + sub-title) float just beyond the dot,
+   above for row 0, below for row 1.
+   
+   Animation sequence:
+     0–40%  → axis and year ticks draw in
+     40–70% → vertical stem 1 grows from axis to dot
+     70–100%→ horizontal stem 2 (duration) grows from dot rightward
+              + labels fade in
+   ════════════════════════════════════════════════════════════ */
+function drawTimeline(){
+  var canvas=document.getElementById('timelineCanvas');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  var W=canvas.width,H=canvas.height;
+  var minY=2013,maxY=2025,span=maxY-minY;
+  var padL=24,padR=24,trackW=W-padL-padR;
+  function xOf(yr){return padL+((yr-minY)/span)*trackW;}
+
+  // Axis sits at the vertical centre of the canvas
+  // Axis at 44% — bottom 56% reserved for down-stems + year label strip
+  var axisY=H*0.44;
+
+  var gold='#B8922A',crimson='#7D1A1A',forest='#2D5016',gray='#6A6355';
+
+  // PX_PER_YEAR: how many horizontal pixels one year of duration equals.
+  // Tuned so the longest role (Kink Bar, 3 years) fills a readable length.
+  var PX_PER_YEAR = 46;
+
+  // DOT_R: radius of the lollipop circle at the tip of stem 1
+  var DOT_R = 4;
+
+  // STEM1_H: staggered heights for the vertical stems.
+  // Alternating row 0/1 with varying heights prevents label collisions.
+  // These are pixel distances from the axis to the dot centre.
+  var roles=[
+    // label, sub, start (decimal yr), end, color, row 0=above/1=below, stem1 height
+    {label:'Casa Negra',  sub:'Barback → Bartender', start:2013.42,end:2014.92,color:gold,   row:0,stemH:38},
+    {label:'Santa María', sub:'Head Barkeeper',       start:2015,   end:2016,   color:crimson,row:1,stemH:32},
+    {label:'The Butcher', sub:'Head Bartender',       start:2016,   end:2017,   color:crimson,row:0,stemH:48},
+    {label:'Hefner Bar',  sub:'Barkeeper',            start:2017,   end:2017.75,color:crimson,row:1,stemH:46},
+    {label:'Monkey Bar',  sub:'Chef de Rang',         start:2017,   end:2019,   color:crimson,row:0,stemH:30},
+    {label:'FREA',        sub:'Head Barkeeper',       start:2019,   end:2019.75,color:crimson,row:1,stemH:58},
+    {label:'Kink Bar',    sub:'Senior Bartender',     start:2020,   end:2023,   color:crimson,row:1,stemH:36},
+    {label:'DataCraft',   sub:'Data Analyst ↗',      start:2024,   end:2025,   color:forest, row:0,stemH:44,active:true}
+  ];
+
+  function draw(p){
+    ctx.clearRect(0,0,W,H);
+
+    // ── Axis line ──────────────────────────────────────────
+    ctx.beginPath();ctx.moveTo(padL,axisY);ctx.lineTo(W-padR,axisY);
+    ctx.strokeStyle='rgba(0,0,0,0.15)';ctx.lineWidth=1;ctx.stroke();
+
+    // ── Year ticks and labels ──────────────────────────────
+    for(var yr=minY;yr<=maxY;yr++){
+      var x=xOf(yr);
+      ctx.beginPath();ctx.moveTo(x,axisY-4);ctx.lineTo(x,axisY+4);
+      ctx.strokeStyle='rgba(0,0,0,0.2)';ctx.lineWidth=1;ctx.stroke();
+      ctx.font='500 8px "DM Mono",monospace';
+      ctx.fillStyle=gray;ctx.textAlign='center';
+      // Year labels: above axis for row 0 stems, below for row 1.
+      // We place them all below to keep the area above the axis clean.
+      // Year labels at bottom strip — never overlaps any stem
+      ctx.fillText(yr,x,H-8);
+    }
+
+    // ── Per-role drawing ───────────────────────────────────
+    roles.forEach(function(r){
+      var x0 = xOf(r.start);  // x position of the start date (stem1 base)
+      var dir = r.row===0 ? -1 : 1;  // -1 = up, +1 = down
+
+      // ── Phase 1 (p: 0→0.5): stem 1 grows from axis to dot ──
+      var stem1Progress = Math.min(p / 0.5, 1);
+      var currentStem1H = r.stemH * stem1Progress;
+      var dotY = axisY + dir * r.stemH;  // final dot y position
+      var currentDotY = axisY + dir * currentStem1H;  // animated dot y
+
+      // Draw stem 1 line
+      ctx.beginPath();ctx.moveTo(x0,axisY);ctx.lineTo(x0,currentDotY);
+      ctx.strokeStyle=r.color;ctx.lineWidth=1.5;
+      ctx.globalAlpha=0.7;ctx.stroke();ctx.globalAlpha=1;
+
+      // Draw dot at current tip of stem 1
+      ctx.beginPath();ctx.arc(x0,currentDotY,DOT_R,0,Math.PI*2);
+      ctx.fillStyle=r.color;ctx.fill();
+
+      // Also draw a small anchor dot on the axis at start date
+      ctx.beginPath();ctx.arc(x0,axisY,2.5,0,Math.PI*2);
+      ctx.fillStyle=r.color;ctx.fill();
+
+      // ── Phase 2 (p: 0.5→1): stem 2 (duration) grows rightward ──
+      if(p > 0.5 && stem1Progress >= 1){
+        var stem2Progress = Math.min((p - 0.5) / 0.5, 1);
+        var durationPx = (r.end - r.start) * PX_PER_YEAR;
+        var currentDurationPx = durationPx * stem2Progress;
+
+        // Duration bar: a horizontal line from dot centre, going RIGHT
+        ctx.beginPath();
+        ctx.moveTo(x0, dotY);
+        ctx.lineTo(x0 + currentDurationPx, dotY);
+        ctx.strokeStyle=r.color;
+        ctx.lineWidth=r.active ? 3 : 2.5;
+        ctx.lineCap='round';
+        ctx.stroke();
+        ctx.lineCap='butt';
+
+        // End cap dot on duration bar
+        if(stem2Progress > 0.8){
+          ctx.beginPath();
+          ctx.arc(x0+currentDurationPx, dotY, 2.5, 0, Math.PI*2);
+          ctx.fillStyle=r.color;ctx.fill();
+        }
+
+        // Labels fade in as duration bar draws
+        if(stem2Progress > 0.4){
+          var labelAlpha = Math.min((stem2Progress-0.4)/0.6, 1);
+          ctx.globalAlpha=labelAlpha;
+
+          // Label position: just beyond dot, perpendicular to stem 2
+          // Row 0 (stem goes up): labels sit ABOVE the dot
+          // Row 1 (stem goes down): labels sit BELOW the dot
+          var nameY  = r.row===0 ? dotY - DOT_R - 4  : dotY + DOT_R + 4;
+          var subY   = r.row===0 ? nameY - 10         : nameY + 10;
+          var nameBaseline = r.row===0 ? 'bottom' : 'top';
+          var subBaseline  = r.row===0 ? 'bottom' : 'top';
+
+          ctx.font='600 9px "DM Sans",sans-serif';
+          ctx.fillStyle=r.color;
+          ctx.textAlign='left';
+          ctx.textBaseline=nameBaseline;
+          ctx.fillText(r.label, x0+DOT_R+3, nameY);
+
+          ctx.font='300 8px "DM Sans",sans-serif';
+          ctx.fillStyle=gray;
+          ctx.textBaseline=subBaseline;
+          ctx.fillText(r.sub, x0+DOT_R+3, subY);
+
+          ctx.globalAlpha=1;
+        }
+      }
+    });
+  }
+
+  var dur=1600,start=performance.now();
+  function anim(now){
+    var p=Math.min((now-start)/dur,1);
+    draw(1-Math.pow(1-p,3));
+    if(p<1)requestAnimationFrame(anim);else draw(1);
+  }
+  setTimeout(function(){requestAnimationFrame(anim);},600);
+}
+drawTimeline();
+
+});
+</script>
+
+</body>
+</html>
