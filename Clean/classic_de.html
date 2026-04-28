@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernardo Pingarron — Lebenslauf</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* Print — standard margins, no zero-margin tricks, flows across pages naturally */
+@page { size: A4 portrait; margin: 10mm 13mm; }
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: white; padding: 0; }
+  .no-print { display: none; }
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black:  #111111;
+  --dark:   #2C2C2C;
+  --mid:    #555555;
+  --light:  #888888;
+  --rule:   #DDDDDD;
+  --accent: #1A3A5C;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--dark);
+  background: #fff;
+  max-width: 760px;
+  margin: 0 auto;
+  /* Reduced top padding — was 32px, now 16px so screen preview matches tighter print margin */
+  padding: 8px 18px 38px;
+}
+
+
+/* ── Header ── */
+.header { margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1.5px solid var(--black); }
+.name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.title  { font-size: 12px; font-weight: 500; color: var(--accent); margin-bottom: 7px; }
+.contact { font-size: 9.5px; color: var(--mid); display: flex; flex-wrap: wrap; }
+.contact a { color: var(--mid); text-decoration: none; }
+.contact a:hover { color: var(--accent); }
+.contact-sep { margin: 2px 8px; color: var(--rule); }
+
+/* ── Sections ── */
+.section { margin-bottom: 6px; }
+.section-title {
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  margin-bottom: 4px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── Summary ── */
+.summary { font-size: 10.5px; color: var(--dark); line-height: 1.6; }
+
+/* ── Skills grid ── */
+.skills-grid { display: grid; grid-template-columns: 148px 1fr; gap: 3px 12px; font-size: 10px; }
+.skill-cat   { font-weight: 600; color: var(--dark); padding-top: 1px; }
+.skill-val   { color: var(--dark); }
+
+/* ── Experience ── */
+.role        { margin-bottom: 8px; }
+.role:last-child { margin-bottom: 0; }
+.role-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+.role-company     { font-size: 11px; font-weight: 600; color: var(--black); }
+.role-company-sub { font-size: 9px; color: var(--mid); font-weight: 400; margin-left: 5px; }
+.role-date        { font-size: 9.5px; color: var(--mid); white-space: nowrap; margin-left: 12px; }
+.role-title       { font-size: 10px; font-weight: 500; color: var(--accent); margin-bottom: 2px; }
+.bullets          { list-style: none; padding: 0; margin: 0; }
+.bullets li {
+  font-size: 10px;
+  color: var(--dark);
+  line-height: 1.5;
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 1px;
+}
+.bullets li::before { content: '–'; position: absolute; left: 0; color: var(--light); }
+
+/* ── Education ── */
+.edu-item        { margin-bottom: 8px; }
+.edu-item:last-child { margin-bottom: 0; }
+.edu-header      { display: flex; justify-content: space-between; align-items: baseline; }
+.edu-institution { font-size: 11px; font-weight: 600; color: var(--black); }
+.edu-date        { font-size: 9.5px; color: var(--mid); white-space: nowrap; margin-left: 12px; }
+.edu-degree      { font-size: 10px; font-weight: 500; color: var(--accent); margin-bottom: 1px; }
+.edu-detail      { font-size: 9.5px; color: var(--mid); }
+
+/* ── Awards ── */
+.award-item { display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; margin-bottom: 3px; }
+.award-name { color: var(--dark); }
+.award-date { font-size: 9.5px; color: var(--mid); white-space: nowrap; margin-left: 12px; }
+
+/* ── Languages ── */
+.lang-row        { font-size: 10px; color: var(--dark); }
+.lang-row span   { margin-right: 20px; }
+.lang-level      { color: var(--mid); font-weight: 400; }
+
+</style>
+</head>
+<body>
+
+
+<!-- HEADER -->
+<div class="header">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;">
+    <div class="name">Bernardo Pingarron</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px 24px; text-align:right;">
+      <a href="mailto:b.pingarron.c@gmail.com" style="color:var(--mid); text-decoration:none; font-size:9.5px;">b.pingarron.c@gmail.com</a>
+      <a href="https://github.com/Stringsdaemon" target="_blank" style="color:var(--mid); text-decoration:none; font-size:9.5px;">github.com/Stringsdaemon</a>
+      <a href="https://b-pingarron.github.io/B-Pingarron-Dashboard-Lebenslauf/" target="_blank" style="color:var(--mid); text-decoration:none; font-size:9.5px;">b-pingarron.github.io</a>
+      <span style="color:var(--mid); font-size:9.5px;">Berlin, Deutschland</span>
+    </div>
+  </div>
+  <div class="title">Data Analyst · Python · SQL · Power BI · Berlin</div>
+</div>
+
+<!-- BERUFLICHES PROFIL -->
+<div class="section">
+  <div class="section-title">Berufliches Profil</div>
+  <div class="summary">
+    Analytisch denkender Data Analyst mit Hintergrund in der Gastronomie — 10+ Jahre Erfahrung in
+    Engpassidentifikation, Prozessoptimierung und cross-funktionaler Koordination. Abgeschlossen:
+    Smart Future Campus (ehem. DataCraft Academy) Bootcamp (Python, SQL, Power BI, Machine Learning).
+    Ich übersetze operative Komplexität in datengestützte Entscheidungen.
+  </div>
+</div>
+
+<!-- TECHNISCHE KENNTNISSE -->
+<!-- Note: in the clean text version this section IS the ATS keyword block —
+     no separate hidden text needed, parsers read this directly. -->
+<div class="section">
+  <div class="section-title">Technische Kenntnisse</div>
+  <div class="skills-grid">
+    <div class="skill-cat">Programmierung</div>
+    <div class="skill-val">Python (pandas, numpy, seaborn, matplotlib), SQL</div>
+    <div class="skill-cat">BI &amp; Visualisierung</div>
+    <div class="skill-val">Power BI, Excel, Power Query, Datenvisualisierung, Dashboards, KPI-Reporting</div>
+    <div class="skill-cat">Daten &amp; Prozesse</div>
+    <div class="skill-val">Datenbereinigung, Datenaufbereitung, ETL, Datenmodellierung, Business Intelligence</div>
+    <div class="skill-cat">Deployment &amp; Tools</div>
+    <div class="skill-val">Git, GitHub, Streamlit, LLM Prompting, Machine Learning (Grundlagen), API-Integration</div>
+    <div class="skill-cat">Soft Skills</div>
+    <div class="skill-val">Teamführung, Problemlösung, Workflow-Optimierung, Agilität, Anpassungsfähigkeit</div>
+  </div>
+</div>
+
+<!-- BERUFSERFAHRUNG -->
+<div class="section">
+  <div class="section-title">Berufserfahrung</div>
+
+  <!-- Smart Future Campus — most recent, data role, highest relevance -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">Smart Future Campus</span>
+        <span class="role-company-sub">ehem. DataCraft Academy · Remote, München</span>
+      </div>
+      <span class="role-date">2024 – 2025</span>
+    </div>
+    <div class="role-title">Data Analyst (Vollzeit-Weiterbildung, abgeschlossen)</div>
+    <ul class="bullets">
+      <li>Abgeschlossenes Vollzeit-Bootcamp mit Fokus auf Python, SQL, Power BI und Machine Learning.</li>
+      <li>Entwickelte Datenbereinigungspipelines in Python (pandas) und erstellte interaktive Dashboards in Power BI zur Visualisierung von KPIs.</li>
+      <li>Arbeitete mit realen Datensätzen an Projekten zu ETL-Prozessen, Datenmodellierung und explorativer Datenanalyse.</li>
+    </ul>
+  </div>
+
+  <!-- Kink Bar — strongest hospitality role, most data-transferable bullets -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">Kink Bar &amp; Restaurant</span>
+        <span class="role-company-sub">Berlin</span>
+      </div>
+      <span class="role-date">2020 – 2023</span>
+    </div>
+    <div class="role-title">Senior Barkeeper</div>
+    <ul class="bullets">
+      <li>Entwickelte und strukturierte ein Bestandsverfolgungssystem zur besseren Planung von Lager, Produktion und Service.</li>
+      <li>Analysierte Serviceabläufe während Stoßzeiten, identifizierte Engpässe und passte Prozesse sowie Stationsaufbau kontinuierlich an.</li>
+      <li>Organisierte und optimierte kontinuierlich die räumliche Ressourcenverteilung von Bar, Labor und Lager — angepasst an Nutzungsmuster und sich verändernde Betriebsanforderungen.</li>
+      <li>Koordinierte in Echtzeit zwischen Bar, Service und Spüle — priorisierte Ressourcen und löste operative Probleme proaktiv.</li>
+      <li>Mitverantwortlich für „Restaurant Bar des Jahres" und „Barteam des Jahres" (Mixology Awards 2023).</li>
+    </ul>
+  </div>
+
+  <!-- FREA — short role, two tight bullets -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">FREA Restaurant</span>
+        <span class="role-company-sub">Berlin</span>
+      </div>
+      <span class="role-date">2019</span>
+    </div>
+    <div class="role-title">Head Barkeeper</div>
+    <ul class="bullets">
+      <li>Baute die Barstruktur von Grund auf — räumliche Organisation aller Arbeitsbereiche sowie Aufbau eines ausschließlich veganen Lieferantennetzwerks für das Backbar-Sortiment; Teil des Teams beim Gewinn des Michelin-Sterns.</li>
+    </ul>
+  </div>
+
+  <!-- Monkey Bar — two bullets -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">Monkey Bar</span>
+        <span class="role-company-sub">Berlin</span>
+      </div>
+      <span class="role-date">2017 – 2019</span>
+    </div>
+    <div class="role-title">Chef de Rang (Bar)</div>
+    <ul class="bullets">
+      <li>Verantwortlich für Mise en Place, Batch-Produktion, Bestandskontrolle und Frischwaren-Logistik.</li>
+      <li>Strukturierte Produktions- und Lagerprozesse zur Sicherstellung eines reibungslosen Serviceablaufs.</li>
+    </ul>
+  </div>
+
+  <!-- Earlier Berlin roles — one bullet, combined for brevity -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">The Butcher / Hefner Bar / Santa María Eastside</span>
+        <span class="role-company-sub">Berlin</span>
+      </div>
+      <span class="role-date">2015 – 2017</span>
+    </div>
+    <div class="role-title">Head Bartender / Barkeeper / Head Barkeeper</div>
+    <ul class="bullets">
+      <li>Führungspositionen in mehreren renommierten Berliner Barbetrieben; verantwortlich für Barmanagement, Teamführung und operative Koordination.</li>
+    </ul>
+  </div>
+
+  <!-- Casa Negra — title says it all, no bullet needed -->
+  <div class="role">
+    <div class="role-header">
+      <div>
+        <span class="role-company">Casa Negra Restaurant Bar</span>
+        <span class="role-company-sub">London</span>
+      </div>
+      <span class="role-date">06/2013 – 12/2014</span>
+    </div>
+    <div class="role-title">Barback → Bartender</div>
+  </div>
+
+</div>
+
+<!-- BILDUNG & ZERTIFIKATE -->
+<div class="section">
+  <div class="section-title">Bildung &amp; Zertifikate</div>
+
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-institution">Smart Future Campus <span style="font-weight:400;color:var(--mid)">(ehem. DataCraft Academy)</span></span>
+      <span class="edu-date">2024 – 2025</span>
+    </div>
+    <div class="edu-degree">Data Analyst — Vollzeit-Bootcamp (abgeschlossen)</div>
+    <div class="edu-detail">Python · SQL · Power BI · Machine Learning · Remote, München</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-institution">DataCamp</span>
+      <span class="edu-date">Laufend</span>
+    </div>
+    <div class="edu-degree">Zertifikate: Python, Pandas &amp; Datenbereinigung, SQL-Grundlagen</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-institution">Universidad Complutense de Madrid</span>
+      <span class="edu-date">2009 – 2013</span>
+    </div>
+    <div class="edu-degree">Traducción e Interpretación (ES / EN / DE / JP) — ohne Abschluss</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-institution">CES Santiago Rusiñol, Aranjuez</span>
+      <span class="edu-date">2008</span>
+    </div>
+    <div class="edu-degree">Bachillerato (Abitur-Äquivalent)</div>
+  </div>
+
+</div>
+
+<!-- AUSZEICHNUNGEN -->
+<div class="section">
+  <div class="section-title">Auszeichnungen</div>
+  <div class="award-item">
+    <span class="award-name">Mixology Awards — Barteam des Jahres &amp; Restaurant Bar des Jahres <span style="color:#888;font-weight:400">(Kink Bar &amp; Restaurant) — höchste Auszeichnung der deutschen Barbranche</span></span>
+    <span class="award-date">2023</span>
+  </div>
+</div>
+
+<!-- SPRACHEN -->
+<div class="section">
+  <div class="section-title">Sprachen</div>
+  <div class="lang-row">
+    <span><strong>Deutsch</strong> <span class="lang-level">— B2 (fortgeschritten)</span></span>
+    <span><strong>Englisch</strong> <span class="lang-level">— C2 (fließend)</span></span>
+    <span><strong>Spanisch</strong> <span class="lang-level">— Muttersprache</span></span>
+  </div>
+</div>
+
+</body>
+</html>
