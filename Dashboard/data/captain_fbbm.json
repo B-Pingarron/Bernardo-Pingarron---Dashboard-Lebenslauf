@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "source": "CAPTain compact test + FBBM motive",
+    "date_taken": "2026-02-26",
+    "provider": "CNT Gesellschaft für Personal- und Unternehmensentwicklung mbH",
+    "scale": "0-10 (0=gering, 10=extrem)"
+  },
+  "captain": {
+    "fuehrungsverhalten": [
+      {"dimension": "Führungsrolle", "captain": 5, "self_assess": 6, "gap": -1, "desc_de": "Agieren als Kollege, kaum Führungsrolle"},
+      {"dimension": "Führungsautorität", "captain": 6, "self_assess": null, "gap": null, "desc_de": "Nicht direktiv, bestimmend"},
+      {"dimension": "Delegation", "captain": 4, "self_assess": 7, "gap": -3, "desc_de": "Delegiert und steuert kaum"},
+      {"dimension": "Einflussnahme", "captain": 3, "self_assess": 10, "gap": -7, "desc_de": "Wenig Einfluss auf Arbeitsweise anderer"}
+    ],
+    "umgangsstil_zusammenarbeit": [
+      {"dimension": "Offenheit für Kontakt", "captain": 4, "self_assess": 7, "gap": -3, "desc_de": "Kontaktfreudig aber eher aufgabenbezogen"},
+      {"dimension": "Persönlicher Draht", "captain": 4, "self_assess": 7, "gap": -3, "desc_de": "Professionell, sachorientiert"},
+      {"dimension": "Selbstbeherrschung", "captain": 5, "self_assess": 6, "gap": -1, "desc_de": "Zeigt Unmut ungern, stets höflich"},
+      {"dimension": "Gruppenorientierung", "captain": 4, "self_assess": null, "gap": null, "desc_de": "Anschluss an Gruppe, behält Unabhängigkeit"},
+      {"dimension": "Wortführung i.d. Gruppe", "captain": 3, "self_assess": 4, "gap": -1, "desc_de": "Hört zu und beobachtet bevor er spricht"},
+      {"dimension": "Kooperation", "captain": 4, "self_assess": 5, "gap": -1, "desc_de": "Stimmt sich ab, sucht keine enge Zusammenarbeit"},
+      {"dimension": "Selbstbehauptung", "captain": 6, "self_assess": 7, "gap": -1, "desc_de": "Macht Vorstellungen deutlich, nicht um jeden Preis"},
+      {"dimension": "Rücksichtnahme", "captain": 6, "self_assess": 7, "gap": -1, "desc_de": "Empathie, zwischenmenschlicher Konsens"},
+      {"dimension": "Überzeugen und Gewinnen", "captain": 7, "self_assess": null, "gap": null, "desc_de": "Regt Diskussion an, fördert Zusammenhalt"}
+    ],
+    "arbeit_ambitionen": [
+      {"dimension": "Art der Einsatzfreude", "captain": 4, "self_assess": 7, "gap": -3, "desc_de": "Identifiziert sich mit Arbeit, weniger euphorisch als gedacht"},
+      {"dimension": "Erfolgsorientierung", "captain": 4, "self_assess": 5, "gap": -1, "desc_de": "Will zeitnah Ergebnisse, ungeduldig bei langen Projekten"},
+      {"dimension": "Wettbewerbsorientierung", "captain": 6, "self_assess": null, "gap": null, "desc_de": "Nicht wettbewerbsorientiert, aber ehrgeizig"},
+      {"dimension": "Ausdauer", "captain": 5, "self_assess": 8, "gap": -3, "desc_de": "Kurzfristig handelnd, kann Aufgaben abgeben"},
+      {"dimension": "Dinge zu Ende bringen", "captain": 5, "self_assess": null, "gap": null, "desc_de": "Beendet Aufgaben, delegiert aber auch"}
+    ],
+    "eigenverantwortung": [
+      {"dimension": "Selbstständigkeit", "captain": 3, "self_assess": 7, "gap": -4, "desc_de": "Will klare Anweisungen und Instruktionen"},
+      {"dimension": "Unterstützungsbedarf", "captain": 2, "self_assess": 3, "gap": -1, "desc_de": "Benötigt keine persönliche Ermutigung"},
+      {"dimension": "Autoritätsorientierung", "captain": 2, "self_assess": 4, "gap": -2, "desc_de": "Lässt sich nicht von Führungserwartungen beeinflussen"}
+    ],
+    "zielorientierung": [
+      {"dimension": "Zielorientierung", "captain": 5, "self_assess": 8, "gap": -3, "desc_de": "Prozessorientiert, vorsichtig bei Entscheidungen"},
+      {"dimension": "Entscheidungsfreude", "captain": 5, "self_assess": 7, "gap": -2, "desc_de": "Trifft Entscheidungen, geht Risiken ungern ein"}
+    ],
+    "pragmatismus_kreativitaet": [
+      {"dimension": "Sorgfältige Umsetzung", "captain": 4, "self_assess": 5, "gap": -1, "desc_de": "Sorgfältig und zuverlässig, pragmatisch"},
+      {"dimension": "Überlegtheit", "captain": 5, "self_assess": null, "gap": null, "desc_de": "Wägt ab und schreitet zur Tat"},
+      {"dimension": "Neugier", "captain": 6, "self_assess": 7, "gap": -1, "desc_de": "Sehr hohes Bedürfnis nach neuen Impulsen"},
+      {"dimension": "Eigene Ideen", "captain": 6, "self_assess": 7, "gap": -1, "desc_de": "Potenzial für kreatives Denken"},
+      {"dimension": "Veränderungskraft", "captain": 7, "self_assess": null, "gap": null, "desc_de": "Setzt sich für Neuerungen ein, auch gegen Widerstände"}
+    ],
+    "systematik_genauigkeit": [
+      {"dimension": "Selbstorganisation", "captain": 3, "self_assess": 4, "gap": -1, "desc_de": "Relativ organisiert, stellt sich schnell um"},
+      {"dimension": "Detailorientierung", "captain": 5, "self_assess": 9, "gap": -4, "desc_de": "Legt Wert auf Details, aber weniger als gedacht"},
+      {"dimension": "Arbeitsplanung", "captain": 5, "self_assess": null, "gap": null, "desc_de": "Erfahrungsbasiert, nicht theoretisch planerisch"}
+    ],
+    "aktivitaet": [
+      {"dimension": "Arbeitstempo", "captain": 6, "self_assess": null, "gap": null, "desc_de": "Schnell, erledigt viele Dinge in kurzer Zeit"},
+      {"dimension": "Aktivitätsniveau", "captain": 4, "self_assess": 5, "gap": -1, "desc_de": "Schrittweise, nicht multitasking"}
+    ],
+    "selbstvertrauen": [
+      {"dimension": "Selbstvertrauen", "captain": 4, "self_assess": 5, "gap": -1, "desc_se": "Sicher, kann Kritik zulassen"}
+    ]
+  },
+  "fbbm": {
+    "source": "FBBM | motive — 14 berufliche Motive",
+    "scale_note": "Qualitative assessment — no numerical scores. Strong/moderate/weak based on report structure.",
+    "strong": [
+      {"motive": "Dienstleistungsorientierung", "score_relative": 8, "desc_de": "Tut gerne etwas für andere, regelmäßiger direkter Kontakt"},
+      {"motive": "Besondere Herausforderung", "score_relative": 9, "desc_de": "Scheinbar unlösbare Probleme spornen an"},
+      {"motive": "Sicherheit", "score_relative": 8, "desc_de": "Berufliche Sicherheit und Beständigkeit von großer Bedeutung"},
+      {"motive": "Privatleben", "score_relative": 8, "desc_de": "Gleichgewicht zwischen Berufs- und Privatleben wichtig"}
+    ],
+    "moderate": [
+      {"motive": "Fachliche Expertise", "score_relative": 5, "desc_de": "Will fachlich gut sein, braucht keine Expertenstellung"},
+      {"motive": "Verantwortung", "score_relative": 5, "desc_de": "Möchte Verantwortung, aber nicht primär handlungssteuernd"},
+      {"motive": "Selbstständigkeit", "score_relative": 5, "desc_de": "Selbstbestimmt aber auch nach Anordnung okay"},
+      {"motive": "Identifikation mit Unternehmen", "score_relative": 5, "desc_de": "Identifiziert sich gerne, kann aber auch neutral arbeiten"},
+      {"motive": "Mitarbeiterführung", "score_relative": 5, "desc_de": "Interessant, aber nicht demotivierend wenn nicht vorhanden"},
+      {"motive": "Kreativität", "score_relative": 5, "desc_de": "Entwickelt gerne Ideen, aber auch bewährte Methoden okay"}
+    ],
+    "weak": [
+      {"motive": "Status und Anerkennung", "score_relative": 2, "desc_de": "Nicht durch Statussymbole motivierbar"},
+      {"motive": "Macht und Einfluss", "score_relative": 2, "desc_de": "Macht sich nichts aus dem Sagen haben"},
+      {"motive": "Verkaufen", "score_relative": 2, "desc_de": "Mag keine Aufgaben die hauptsächlich Überzeugen verlangen"},
+      {"motive": "Hohes Einkommen", "score_relative": 2, "desc_de": "Materielle Anreize sind kein wesentlicher Motivator"}
+    ]
+  }
+}

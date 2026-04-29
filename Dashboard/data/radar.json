@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "description": "Radar chart data — values derived from CAPTAIN test dimensions",
+    "source": "captain_fbbm.json",
+    "note": "All values 0.0-1.0. Each axis maps to specific CAPTAIN dimensions with derivation logic documented."
+  },
+  "radars": [
+    {
+      "id": "beruflich",
+      "title_de": "Beruflich",
+      "title_en": "Professional",
+      "title_es": "Profesional",
+      "color": "#2D5016",
+      "axes": [
+        {
+          "label_short_de": "Anpassung",
+          "label_long_de": "Anpassungsfähigkeit",
+          "label_short_en": "Adaptability",
+          "label_long_en": "Adaptability",
+          "label_short_es": "Adaptación",
+          "label_long_es": "Adaptabilidad",
+          "value": 0.87,
+          "captain_dimensions": ["Veränderungskraft: 7", "Selbstorganisation(flexibel): 3"],
+          "derivation": "High change drive + flexible adaptation = strong adaptability. Room to grow in systematic flexibility."
+        },
+        {
+          "label_short_de": "Innovation",
+          "label_long_de": "Innovation",
+          "label_short_en": "Innovation",
+          "label_long_en": "Innovation",
+          "label_short_es": "Innovación",
+          "label_long_es": "Innovación",
+          "value": 0.82,
+          "captain_dimensions": ["Eigene Ideen: 6", "Neugier: 6"],
+          "derivation": "Creative potential + high curiosity for new stimuli. Could push toward more structured innovation."
+        },
+        {
+          "label_short_de": "Sozial",
+          "label_long_de": "Soziale Orientierung",
+          "label_short_en": "Social",
+          "label_long_en": "Social Orientation",
+          "label_short_es": "Social",
+          "label_long_es": "Orientación Social",
+          "value": 0.84,
+          "captain_dimensions": ["Rücksichtnahme: 6", "Überzeugen und Gewinnen: 7"],
+          "derivation": "Strong empathy and team cohesion. Professional distance limits deeper social engagement."
+        },
+        {
+          "label_short_de": "Unabhängig-\nkeit",
+          "label_long_de": "Unabhängigkeit",
+          "label_short_en": "Independ-\nence",
+          "label_long_en": "Independence",
+          "label_short_es": "Independ-\nencia",
+          "label_long_es": "Independencia",
+          "value": 0.80,
+          "captain_dimensions": ["Selbstständigkeit: 3", "Autoritätsorientierung: 2"],
+          "derivation": "Wants clear instructions (low self-direction) but not influenced by authority. Independence is moderate — prefers guidance."
+        },
+        {
+          "label_short_de": "Leistung",
+          "label_long_de": "Leistung & Einsatz",
+          "label_short_en": "Performance",
+          "label_long_en": "Performance & Drive",
+          "label_short_es": "Rendimiento",
+          "label_long_es": "Rendimiento y Dedicación",
+          "value": 0.92,
+          "captain_dimensions": ["Arbeitstempo: 6", "Erfolgsorientierung: 4", "Wettbewerbsorientierung: 6"],
+          "derivation": "Fast worker with competitive drive. Impatient with long projects but delivers results quickly."
+        }
+      ]
+    },
+    {
+      "id": "persoenlich",
+      "title_de": "Persönlich",
+      "title_en": "Personal",
+      "title_es": "Personal",
+      "color": "#7D1A1A",
+      "axes": [
+        {
+          "label_short_de": "Empathie",
+          "label_long_de": "Empathie & Zusammenarbeit",
+          "label_short_en": "Empathy",
+          "label_long_en": "Empathy & Collaboration",
+          "label_short_es": "Empatía",
+          "label_long_es": "Empatía y Colaboración",
+          "value": 0.93,
+          "captain_dimensions": ["Rücksichtnahme: 6", "Persönlicher Draht: 4", "Selbstbeherrschung: 5"],
+          "derivation": "High empathy and consensus-seeking. Professional distance (4/10 personal warmth) is the limiting factor."
+        },
+        {
+          "label_short_de": "Strategie",
+          "label_long_de": "Strategisches Denken",
+          "label_short_en": "Strategy",
+          "label_long_en": "Strategic Thinking",
+          "label_short_es": "Estrategia",
+          "label_long_es": "Pensamiento Estratégico",
+          "value": 0.83,
+          "captain_dimensions": ["Zielorientierung: 5", "Überlegtheit: 5"],
+          "derivation": "Process-oriented with balanced pragmatism. Could strengthen strategic goal-focus over process-following."
+        },
+        {
+          "label_short_de": "Lernbereit-\nschaft",
+          "label_long_de": "Lernbereitschaft",
+          "label_short_en": "Willingness\nto Learn",
+          "label_long_en": "Willingness to Learn",
+          "label_short_es": "Disposición\npara Aprender",
+          "label_long_es": "Disposición para Aprender",
+          "value": 0.91,
+          "captain_dimensions": ["Neugier: 6", "Veränderungskraft: 7"],
+          "derivation": "Very high need for new stimuli + drives change against resistance. Strong learning orientation."
+        },
+        {
+          "label_short_de": "Kreativ",
+          "label_long_de": "Kreative Vision",
+          "label_short_en": "Creative",
+          "label_long_en": "Creative Vision",
+          "label_short_es": "Creativo",
+          "label_long_es": "Visión Creativa",
+          "value": 0.86,
+          "captain_dimensions": ["Eigene Ideen: 6", "Überlegtheit: 5"],
+          "derivation": "Creative potential with pragmatic thinking. Develops own ideas for improvement."
+        },
+        {
+          "label_short_de": "Perspektive",
+          "label_long_de": "Perspektive",
+          "label_short_en": "Perspective",
+          "label_long_en": "Perspective",
+          "label_short_es": "Perspectiva",
+          "label_long_es": "Perspectiva",
+          "value": 0.81,
+          "captain_dimensions": ["Gruppenorientierung: 4", "Wortführung: 3"],
+          "derivation": "Observes before speaking, values independence within group. Moderate big-picture orientation."
+        },
+        {
+          "label_short_de": "Emotionale\nIntelligenz",
+          "label_long_de": "Emotionale Intelligenz",
+          "label_short_en": "Emotional\nIntelligence",
+          "label_long_en": "Emotional Intelligence",
+          "label_short_es": "Inteligencia\nEmocional",
+          "label_long_es": "Inteligencia Emocional",
+          "value": 0.89,
+          "captain_dimensions": ["Selbstbeherrschung: 5", "Selbstvertrauen: 4"],
+          "derivation": "Controlled, accepts criticism, stays polite under pressure. Moderate self-confidence keeps it from being extreme."
+        }
+      ]
+    },
+    {
+      "id": "soft_skills",
+      "title_de": "Soft Skills",
+      "title_en": "Soft Skills",
+      "title_es": "Habilidades Blandas",
+      "color": "#B8922A",
+      "axes": [
+        {
+          "label_short_de": "Problem-\nlösung",
+          "label_long_de": "Problemlösung",
+          "label_short_en": "Problem\nSolving",
+          "label_long_en": "Problem Solving",
+          "label_short_es": "Resolución\nde Problemas",
+          "label_long_es": "Resolución de Problemas",
+          "value": 0.80,
+          "captain_dimensions": ["Besondere Herausforderung: strong(FBBM)", "Arbeitstempo: 6"],
+          "derivation": "Thrives on impossible problems + fast execution. Self-assigned score."
+        },
+        {
+          "label_short_de": "Teamführung",
+          "label_long_de": "Teamführung",
+          "label_short_en": "Team\nLeadership",
+          "label_long_en": "Team Leadership",
+          "label_short_es": "Liderazgo\nde Equipo",
+          "label_long_es": "Liderazgo de Equipo",
+          "value": 0.80,
+          "captain_dimensions": ["Führungsrolle: 5", "Kooperation: 4"],
+          "derivation": "Team member who coordinates, not leads. Decent but not a natural leader — improvement area."
+        },
+        {
+          "label_short_de": "Workflow",
+          "label_long_de": "Workflow-Optimierung",
+          "label_short_en": "Workflow",
+          "label_long_en": "Workflow Optimization",
+          "label_short_es": "Flujo de\nTrabajo",
+          "label_long_es": "Optimización de Flujo de Trabajo",
+          "value": 0.80,
+          "captain_dimensions": ["Selbstorganisation: 3", "Arbeitsplanung: 5"],
+          "derivation": "Flexible but not highly systematic. Good at experience-based execution, less at structured planning."
+        },
+        {
+          "label_short_de": "Agilität",
+          "label_long_de": "Agilität",
+          "label_short_en": "Agility",
+          "label_long_en": "Agility",
+          "label_short_es": "Agilidad",
+          "label_long_es": "Agilidad",
+          "value": 1.00,
+          "captain_dimensions": ["Veränderungskraft: 7", "Besondere Herausforderung: strong(FBBM)"],
+          "derivation": "Maximum score — drives change against resistance + thrives on challenges. Core strength."
+        },
+        {
+          "label_short_de": "Anpassungs-\nfähigkeit",
+          "label_long_de": "Anpassungsfähigkeit",
+          "label_short_en": "Adaptability",
+          "label_long_en": "Adaptability",
+          "label_short_es": "Adaptabilidad",
+          "label_long_es": "Adaptabilidad",
+          "value": 1.00,
+          "captain_dimensions": ["Selbstorganisation(flexibel): 3", "Neugier: 6"],
+          "derivation": "Maximum score — adapts quickly to new requirements, high curiosity for change. Core strength."
+        }
+      ]
+    }
+  ]
+}

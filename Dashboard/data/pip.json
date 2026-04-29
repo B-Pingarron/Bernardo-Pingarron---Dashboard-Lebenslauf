@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "description": "Tool skills pip grid — 4 groups, 3 skills each, 10-point scale",
+    "source": "User self-assigned scores from Claude logs (Resume dashboard design conversation, lines 920-927)",
+    "scale": "0-10 (relative to Junior Data Analyst benchmark)",
+    "pip_shape_meaning": {
+      "round": "Languages",
+      "square": "Technical skills"
+    }
+  },
+  "groups": [
+    {
+      "id": "sprachen",
+      "title_de": "Sprachen",
+      "title_en": "Languages",
+      "title_es": "Idiomas",
+      "shape": "round",
+      "color": "#2D5016",
+      "color_class": "la",
+      "skills": [
+        {
+          "name_de": "Spanisch",
+          "name_en": "Spanish",
+          "name_es": "Español",
+          "value": 10,
+          "level_de": "Muttersprache",
+          "level_en": "Native",
+          "level_es": "Nativo"
+        },
+        {
+          "name_de": "Englisch",
+          "name_en": "English",
+          "name_es": "Inglés",
+          "value": 10,
+          "level_de": "C2 · Fließend",
+          "level_en": "C2 · Fluent",
+          "level_es": "C2 · Fluido"
+        },
+        {
+          "name_de": "Deutsch",
+          "name_en": "German",
+          "name_es": "Alemán",
+          "value": 8,
+          "level_de": "B2 · Fortgeschritten",
+          "level_en": "B2 · Advanced",
+          "level_es": "B2 · Avanzado"
+        }
+      ]
+    },
+    {
+      "id": "visualisierung_reporting",
+      "title_de": "Visualisierung & Reporting",
+      "title_en": "Visualization & Reporting",
+      "title_es": "Visualización y Reportes",
+      "shape": "square",
+      "color": "#7D1A1A",
+      "color_class": "cr",
+      "skills": [
+        {
+          "name_de": "Excel",
+          "name_en": "Excel",
+          "name_es": "Excel",
+          "value": 8,
+          "level_de": "Fortgeschritten · Starker Alltagseinsatz",
+          "level_en": "Advanced · Strong daily use",
+          "level_es": "Avanzado · Uso diario fuerte"
+        },
+        {
+          "name_de": "Power Query",
+          "name_en": "Power Query",
+          "name_es": "Power Query",
+          "value": 7,
+          "level_de": "Fortgeschritten · Datenbereinigung",
+          "level_en": "Advanced · Data cleaning",
+          "level_es": "Avanzado · Limpieza de datos"
+        },
+        {
+          "name_de": "Power BI",
+          "name_en": "Power BI",
+          "name_es": "Power BI",
+          "value": 7,
+          "level_de": "Fortgeschritten · DAX noch lernend",
+          "level_en": "Advanced · Still learning DAX",
+          "level_es": "Avanzado · Aún aprendiendo DAX"
+        }
+      ]
+    },
+    {
+      "id": "programmierung_analyse",
+      "title_de": "Programierung & Analyse",
+      "title_en": "Programming & Analysis",
+      "title_es": "Programación y Análisis",
+      "shape": "square",
+      "color": "#2D5016",
+      "color_class": "fo",
+      "skills": [
+        {
+          "name_de": "Python",
+          "name_en": "Python",
+          "name_es": "Python",
+          "value": 6,
+          "level_de": "Funktional · Nicht fließend",
+          "level_en": "Functional · Not fluent",
+          "level_es": "Funcional · No fluido"
+        },
+        {
+          "name_de": "SQL",
+          "name_en": "SQL",
+          "name_es": "SQL",
+          "value": 4,
+          "level_de": "Grundlagen · Komplexe Joins noch schwierig",
+          "level_en": "Basics · Complex joins still tricky",
+          "level_es": "Básico · Joins complejos aún difíciles"
+        },
+        {
+          "name_de": "LLM Prompt.",
+          "name_en": "LLM Prompting",
+          "name_es": "Prompting LLM",
+          "value": 6,
+          "level_de": "Über dem Durchschnitt",
+          "level_en": "Above average for the field",
+          "level_es": "Por encima del promedio"
+        }
+      ]
+    },
+    {
+      "id": "deployment_versionskontrolle",
+      "title_de": "Deployment & Versionskontrolle",
+      "title_en": "Deployment & Version Control",
+      "title_es": "Deployment y Control de Versiones",
+      "shape": "square",
+      "color": "#B8922A",
+      "color_class": "go",
+      "skills": [
+        {
+          "name_de": "GitHub",
+          "name_en": "GitHub",
+          "name_es": "GitHub",
+          "value": 7,
+          "level_de": "Repos & Branches · Kein CI/CD",
+          "level_en": "Repos & Branches · No CI/CD",
+          "level_es": "Repos y Ramas · Sin CI/CD"
+        },
+        {
+          "name_de": "Streamlit",
+          "name_en": "Streamlit",
+          "name_es": "Streamlit",
+          "value": 5,
+          "level_de": "Kann bauen · Nicht deployen",
+          "level_en": "Can build · Not deploying",
+          "level_es": "Puede construir · No despliega"
+        },
+        {
+          "name_de": "Git CLI",
+          "name_en": "Git CLI",
+          "name_es": "Git CLI",
+          "value": 3,
+          "level_de": "Basic Commits & Pushes",
+          "level_en": "Basic Commits & Pushes",
+          "level_es": "Commits y Pushes Básicos"
+        }
+      ]
+    }
+  ],
+  "ats_keywords": {
+    "de": [
+      "Python · pandas · numpy · seaborn · matplotlib · SQL · Power BI · Excel · Power Query · Git · GitHub · Streamlit · LLM Prompting",
+      "Datenbereinigung · Datenvorbereitung · Datenvisualisierung · ETL · KPI-Reporting · Dashboards · Datenmodellierung · Business Intelligence · API-Integration · Machine Learning"
+    ],
+    "en": [
+      "Python · pandas · numpy · seaborn · matplotlib · SQL · Power BI · Excel · Power Query · Git · GitHub · Streamlit · LLM Prompting",
+      "Data Cleaning · Data Preparation · Data Visualization · ETL · KPI Reporting · Dashboards · Data Modeling · Business Intelligence · API Integration · Machine Learning"
+    ],
+    "es": [
+      "Python · pandas · numpy · seaborn · matplotlib · SQL · Power BI · Excel · Power Query · Git · GitHub · Streamlit · LLM Prompting",
+      "Limpieza de Datos · Preparación de Datos · Visualización de Datos · ETL · Reportes KPI · Dashboards · Modelado de Datos · Business Intelligence · Integración API · Machine Learning"
+    ]
+  }
+}

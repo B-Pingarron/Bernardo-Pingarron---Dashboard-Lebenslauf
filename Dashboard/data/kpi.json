@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "description": "KPI strip — 4 key metrics at the top of the resume",
+    "source": "Handoff v3 + timeline data calculation"
+  },
+  "kpi": [
+    {
+      "id": "kpi_1",
+      "number": "10",
+      "unit": "+",
+      "label_de": "Jahre Erfahrung",
+      "label_en": "Years Experience",
+      "label_es": "Años de Experiencia",
+      "sub_de": "Gastronomie & Hospitality",
+      "sub_en": "Hospitality & Gastronomy",
+      "sub_es": "Gastronomía y Hospitalidad"
+    },
+    {
+      "id": "kpi_2",
+      "number": "2",
+      "unit": "×",
+      "label_de": "Auszeichnungen",
+      "label_en": "Awards",
+      "label_es": "Premios",
+      "sub_de": "Mixology Awards 2023",
+      "sub_en": "Mixology Awards 2023",
+      "sub_es": "Mixology Awards 2023"
+    },
+    {
+      "id": "kpi_3",
+      "number": "3",
+      "unit": "",
+      "label_de": "Sprachen",
+      "label_en": "Languages",
+      "label_es": "Idiomas",
+      "sub_de": "ES (nativ) · EN C2 · DE B2",
+      "sub_en": "ES (native) · EN C2 · DE B2",
+      "sub_es": "ES (nativo) · EN C2 · DE B2"
+    },
+    {
+      "id": "kpi_4",
+      "number": "6",
+      "unit": "+",
+      "label_de": "Stationen",
+      "label_en": "Venues",
+      "label_es": "Establecimientos",
+      "sub_de": "London · Madrid · Berlin",
+      "sub_en": "London · Madrid · Berlin",
+      "sub_es": "Londres · Madrid · Berlín"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "description": "Education & Certificates section",
+    "source": "Handoff v3 lines 161-164 + current template"
+  },
+  "education": [
+    {
+      "id": "edu_1",
+      "name_de": "DataCraft Academy — Data Analyst",
+      "name_en": "DataCraft Academy — Data Analyst",
+      "name_es": "DataCraft Academy — Data Analyst",
+      "meta_de": "Abgeschlossen · Vollzeit · Remote, München",
+      "meta_en": "Completed · Full-time · Remote, Munich",
+      "meta_es": "Completado · Tiempo completo · Remoto, Múnich",
+      "desc_de": "Python, SQL, Power BI, Machine Learning",
+      "desc_en": "Python, SQL, Power BI, Machine Learning",
+      "desc_es": "Python, SQL, Power BI, Machine Learning",
+      "color_class": "fo",
+      "border_color": "#2D5016",
+      "priority": 1
+    },
+    {
+      "id": "edu_2",
+      "name_de": "DataCamp",
+      "name_en": "DataCamp",
+      "name_es": "DataCamp",
+      "meta_de": "Laufend · datacamp.com",
+      "meta_en": "Ongoing · datacamp.com",
+      "meta_es": "En curso · datacamp.com",
+      "desc_de": "Python · Pandas & Datenbereinigung · SQL-Grundlagen",
+      "desc_en": "Python · Pandas & Data Cleaning · SQL Fundamentals",
+      "desc_es": "Python · Pandas y Limpieza de Datos · Fundamentos de SQL",
+      "color_class": "go",
+      "border_color": "#B8922A",
+      "priority": 2
+    },
+    {
+      "id": "edu_3",
+      "name_de": "Übers. & Dolmetschen (ES/EN/DE/JP)",
+      "name_en": "Translation & Interpreting (ES/EN/DE/JP)",
+      "name_es": "Traducción e Interpretación (ES/EN/DE/JP)",
+      "meta_de": "2009–2013 · Univ. Complutense de Madrid · Ohne Abschluss",
+      "meta_en": "2009–2013 · Univ. Complutense de Madrid · No degree",
+      "meta_es": "2009–2013 · Univ. Complutense de Madrid · Sin título",
+      "desc_de": "",
+      "desc_en": "",
+      "desc_es": "",
+      "color_class": "gr",
+      "border_color": "#9A9080",
+      "priority": 3
+    },
+    {
+      "id": "edu_4",
+      "name_de": "Bachillerato (Abitur)",
+      "name_en": "High School Diploma",
+      "name_es": "Bachillerato",
+      "meta_de": "2008 · CES Santiago Rusiñol, Aranjuez",
+      "meta_en": "2008 · CES Santiago Rusiñol, Aranjuez",
+      "meta_es": "2008 · CES Santiago Rusiñol, Aranjuez",
+      "desc_de": "",
+      "desc_en": "",
+      "desc_es": "",
+      "color_class": "gr",
+      "border_color": "#9A9080",
+      "priority": 4
+    }
+  ]
+}

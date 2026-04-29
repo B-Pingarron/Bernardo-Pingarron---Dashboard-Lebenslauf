@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "description": "Donut chart — experience distribution across domains",
+    "source": "timeline.json (duration calculation)",
+    "note": "Percentages calculated from total career years. DataCraft duration uses current date as end for active role."
+  },
+  "center": {
+    "number": "11",
+    "label_de": "Jahre",
+    "label_en": "Years",
+    "label_es": "Años"
+  },
+  "total_years": 11.04,
+  "segments": [
+    {
+      "id": "gastronomie",
+      "domain_de": "Gastronomie",
+      "domain_en": "Hospitality",
+      "domain_es": "Gastronomía",
+      "sub_de": "10 J. · 3 Städte · 6 Stationen",
+      "sub_en": "10 Y. · 3 Cities · 6 Venues",
+      "sub_es": "10 A. · 3 Ciudades · 6 Establecimientos",
+      "pct": 0.74,
+      "years": 8.13,
+      "color": "#B8922A",
+      "icon": "hospo",
+      "roles_included": ["casa_negra", "santa_maria", "the_butcher", "hefner_bar", "monkey_bar", "frea", "kink_bar"]
+    },
+    {
+      "id": "data_analytics",
+      "domain_de": "Data Analytics",
+      "domain_en": "Data Analytics",
+      "domain_es": "Análisis de Datos",
+      "sub_de": "Laufend · DataCraft · DataCamp",
+      "sub_en": "Ongoing · DataCraft · DataCamp",
+      "sub_es": "En curso · DataCraft · DataCamp",
+      "pct": 0.09,
+      "years": 1.03,
+      "color": "#2D5016",
+      "icon": "data",
+      "roles_included": ["datacraft"],
+      "note": "Includes DataCamp certificates + self-study concurrent with hospitality work"
+    },
+    {
+      "id": "sprachen_kultur",
+      "domain_de": "Sprachen & Kultur",
+      "domain_en": "Languages & Culture",
+      "domain_es": "Idiomas y Cultura",
+      "sub_de": "ES - Nativ · EN - C2 · DE - B2 · (JP)",
+      "sub_en": "ES - Native · EN - C2 · DE - B2 · (JP)",
+      "sub_es": "ES - Nativo · EN - C2 · DE - B2 · (JP)",
+      "pct": 0.17,
+      "years": 1.88,
+      "color": "#7D1A1A",
+      "icon": "lang",
+      "roles_included": [],
+      "note": "Derived from university study (2009-2013, 4 years partial) + multilingual work environment"
+    }
+  ]
+}
