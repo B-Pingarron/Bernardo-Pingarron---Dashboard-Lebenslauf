@@ -87,5 +87,21 @@
     "radar_3_axis_5": "Adaptabilidad",
     "donut_seg_1_pct": "65",
     "donut_seg_2_pct": "20",
-    "donut_seg_3_pct": "15"
+    "donut_seg_3_pct": "15",
+    "timeline_role_1_name": "Casa Negra",
+    "timeline_role_1_sub": "Barback → Bartender",
+    "timeline_role_2_name": "Santa María",
+    "timeline_role_2_sub": "Head Barkeeper",
+    "timeline_role_3_name": "The Butcher",
+    "timeline_role_3_sub": "Head Bartender",
+    "timeline_role_4_name": "Hefner Bar",
+    "timeline_role_4_sub": "Barkeeper",
+    "timeline_role_5_name": "Monkey Bar",
+    "timeline_role_5_sub": "Maître D'",
+    "timeline_role_6_name": "FREA",
+    "timeline_role_6_sub": "Head Barkeeper",
+    "timeline_role_7_name": "Kink Bar",
+    "timeline_role_7_sub": "Senior Bartender",
+    "timeline_role_8_name": "DataCraft",
+    "timeline_role_8_sub": "Data Analyst ↗"
 }

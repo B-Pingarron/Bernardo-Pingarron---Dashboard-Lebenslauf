@@ -87,17 +87,9 @@ for (const [lang, translations] of Object.entries(allTranslations)) {
     let html = template;
 
     // Replace {{placeholder}} patterns with translated values
-    // Skip 'chart_data' — it's a nested object, injected as <script> below
     Object.entries(translations).forEach(([key, value]) => {
-        if (key === 'chart_data') return;
         html = html.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
     });
-
-    // Inject CHART_DATA as a global JS object for Canvas charts
-    if (translations.chart_data) {
-        const chartDataScript = `<script>\nconst CHART_DATA = ${JSON.stringify(translations.chart_data)};\n<\/script>`;
-        html = html.replace('<body>', `<body>\n${chartDataScript}`);
-    }
 
     // Post-build: verify no {{placeholders}} remain
     const remaining = html.match(/\{\{(\w+)\}\}/g);

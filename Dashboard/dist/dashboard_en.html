@@ -143,6 +143,37 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .bottom-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:10px;color:var(--cream);opacity:.9;}
 .bottom-mono{font-family:'DM Mono',monospace;font-size:8px;color:var(--gold);letter-spacing:1px;}
 
+/* Radar SVG */
+.radar-svg{width:230px;height:168px;}
+.radar-svg .grid-line{fill:none;stroke:rgba(0,0,0,0.09);stroke-width:0.7;}
+.radar-svg .grid-line-outer{fill:none;stroke:rgba(0,0,0,0.09);stroke-width:1;}
+.radar-svg .axis-line{fill:none;stroke:rgba(0,0,0,0.08);stroke-width:0.7;}
+.radar-svg .radar-shape{stroke-width:2;}
+.radar-svg .radar-dot{r:3;}
+.radar-svg .radar-label{font:400 10px "DM Sans",sans-serif;fill:#3A3530;text-anchor:middle;dominant-baseline:middle;}
+
+/* Donut ring (CSS conic-gradient) */
+.donut-ring{width:106px;height:106px;border-radius:50%;background:conic-gradient(var(--gold) 0% 65%,var(--forest) 65% 85%,var(--crimson) 85% 100%);-webkit-mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);}
+
+/* Timeline chart (div-based) */
+.timeline-chart{position:relative;height:156px;margin-top:4px;}
+.timeline-axis{position:absolute;left:24px;right:24px;top:44%;height:1px;background:rgba(0,0,0,0.15);}
+.timeline-year{position:absolute;top:calc(44% + 8px);transform:translateX(-50%);font:500 8px "DM Mono",monospace;color:var(--mid-gray);}
+.timeline-role{position:absolute;display:flex;flex-direction:column;align-items:center;}
+.timeline-role.top .tl-dot{order:-1;}
+.timeline-role.top .tl-stem{position:absolute;width:1.5px;background:currentColor;opacity:0.7;top:0;bottom:0;left:50%;transform:translateX(-50%);}
+.timeline-role.bottom .tl-stem{position:absolute;width:1.5px;background:currentColor;opacity:0.7;top:0;bottom:0;left:50%;transform:translateX(-50%);}
+.timeline-role.top{bottom:calc(56% + 8px);}
+.timeline-role.bottom{top:calc(44% + 8px);}
+.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;position:relative;z-index:2;}
+.tl-bar{height:2.5px;border-radius:2px;flex-shrink:0;margin-top:-2.75px;}
+.tl-bar.active{height:3px;margin-top:-3px;}
+.tl-labels{position:absolute;white-space:nowrap;display:flex;flex-direction:column;}
+.timeline-role.top .tl-labels{bottom:calc(100% + 2px);}
+.timeline-role.bottom .tl-labels{top:calc(100% + 2px);}
+.tl-label-name{font:600 9px "DM Sans",sans-serif;}
+.tl-label-sub{font:300 8px "DM Sans",sans-serif;color:var(--mid-gray);}
+
 </style>
 </head>
 <body>
@@ -247,22 +278,85 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   </div>
 </div>
 
-<!-- // 002 Kompetenz-Profile — radars -->
+<!-- // 002 Kompetenz-Profile — radars (inline SVG) -->
 <div class="radar-band">
   <div class="radar-col">
     <div class="sec-label" style="text-align:left;">// 002 · Competency Profile</div>
     <div class="radar-col-lbl">Professional</div>
-    <canvas id="radarProf" width="230" height="168"></canvas>
+    <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="grid-line" points="115,44 164.4,79.9 145.6,137.1 84.4,137.1 65.6,79.9"/>
+      <polygon class="grid-line" points="115,62 147.9,83.3 137.1,115.7 92.9,115.7 82.1,83.3"/>
+      <polygon class="grid-line-outer" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <line class="axis-line" x1="115" y1="90" x2="115" y2="38"/>
+      <line class="axis-line" x1="115" y1="90" x2="164.4" y2="73.9"/>
+      <line class="axis-line" x1="115" y1="90" x2="145.6" y2="131.1"/>
+      <line class="axis-line" x1="115" y1="90" x2="84.4" y2="131.1"/>
+      <line class="axis-line" x1="115" y1="90" x2="65.6" y2="73.9"/>
+      <polygon class="radar-shape" fill="rgba(45,80,22,0.14)" stroke="#2D5016" points="115,42.56 159.93,77.62 136.16,127.86 93.06,121.08 81.29,78.65"/>
+      <circle class="radar-dot" cx="115" cy="42.56" fill="#2D5016"/>
+      <circle class="radar-dot" cx="159.93" cy="77.62" fill="#2D5016"/>
+      <circle class="radar-dot" cx="136.16" cy="127.86" fill="#2D5016"/>
+      <circle class="radar-dot" cx="93.06" cy="121.08" fill="#2D5016"/>
+      <circle class="radar-dot" cx="81.29" cy="78.65" fill="#2D5016"/>
+      <text class="radar-label" x="115" y="16">Adaptability</text>
+      <text class="radar-label" x="183" y="65">Innovation</text>
+      <text class="radar-label" x="166" y="153">Social</text>
+      <text class="radar-label" x="64" y="153">Independence</text>
+      <text class="radar-label" x="43" y="65">Performance</text>
+    </svg>
   </div>
   <div class="radar-band-sep"></div>
   <div class="radar-col">
     <div class="radar-col-lbl" style="margin-top:20px;">Personal</div>
-    <canvas id="radarPers" width="230" height="168"></canvas>
+    <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="grid-line" points="115,53.6 151.5,73.4 151.5,112.6 115,132.4 78.5,112.6 78.5,73.4"/>
+      <polygon class="grid-line" points="115,65.7 136.7,76.8 136.7,103.2 115,114.3 93.3,103.2 93.3,76.8"/>
+      <polygon class="grid-line-outer" points="115,44 156.9,67.5 156.9,118.5 115,142 73.1,118.5 73.1,67.5"/>
+      <line class="axis-line" x1="115" y1="90" x2="115" y2="44"/>
+      <line class="axis-line" x1="115" y1="90" x2="156.9" y2="67.5"/>
+      <line class="axis-line" x1="115" y1="90" x2="156.9" y2="118.5"/>
+      <line class="axis-line" x1="115" y1="90" x2="115" y2="142"/>
+      <line class="axis-line" x1="115" y1="90" x2="73.1" y2="118.5"/>
+      <line class="axis-line" x1="115" y1="90" x2="73.1" y2="67.5"/>
+      <polygon class="radar-shape" fill="rgba(125,26,26,0.11)" stroke="#7D1A1A" points="115,47.64 152.49,69.32 149.09,116.07 115,133.96 77.7,113.23 80.11,72.37"/>
+      <circle class="radar-dot" cx="115" cy="47.64" fill="#7D1A1A"/>
+      <circle class="radar-dot" cx="152.49" cy="69.32" fill="#7D1A1A"/>
+      <circle class="radar-dot" cx="149.09" cy="116.07" fill="#7D1A1A"/>
+      <circle class="radar-dot" cx="115" cy="133.96" fill="#7D1A1A"/>
+      <circle class="radar-dot" cx="77.7" cy="113.23" fill="#7D1A1A"/>
+      <circle class="radar-dot" cx="80.11" cy="72.37" fill="#7D1A1A"/>
+      <text class="radar-label" x="115" y="26">Empathy</text>
+      <text class="radar-label" x="179" y="57">Strategy</text>
+      <text class="radar-label" x="179" y="125">Eagerness to Learn</text>
+      <text class="radar-label" x="115" y="162">Creative</text>
+      <text class="radar-label" x="51" y="125">Perspective</text>
+      <text class="radar-label" x="51" y="57">Emotional Intelligence</text>
+    </svg>
   </div>
   <div class="radar-band-sep"></div>
   <div class="radar-col">
     <div class="radar-col-lbl" style="margin-top:20px;">Soft Skills</div>
-    <canvas id="radarSoft" width="230" height="168"></canvas>
+    <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="grid-line" points="115,44 164.4,79.9 145.6,137.1 84.4,137.1 65.6,79.9"/>
+      <polygon class="grid-line" points="115,62 147.9,83.3 137.1,115.7 92.9,115.7 82.1,83.3"/>
+      <polygon class="grid-line-outer" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <line class="axis-line" x1="115" y1="90" x2="115" y2="38"/>
+      <line class="axis-line" x1="115" y1="90" x2="164.4" y2="73.9"/>
+      <line class="axis-line" x1="115" y1="90" x2="145.6" y2="131.1"/>
+      <line class="axis-line" x1="115" y1="90" x2="84.4" y2="131.1"/>
+      <line class="axis-line" x1="115" y1="90" x2="65.6" y2="73.9"/>
+      <polygon class="radar-shape" fill="rgba(184,146,42,0.13)" stroke="#B8922A" points="115,47.4 151.92,80.12 131.2,124.08 88.8,124.08 78.08,80.12"/>
+      <circle class="radar-dot" cx="115" cy="47.4" fill="#B8922A"/>
+      <circle class="radar-dot" cx="151.92" cy="80.12" fill="#B8922A"/>
+      <circle class="radar-dot" cx="131.2" cy="124.08" fill="#B8922A"/>
+      <circle class="radar-dot" cx="88.8" cy="124.08" fill="#B8922A"/>
+      <circle class="radar-dot" cx="78.08" cy="80.12" fill="#B8922A"/>
+<text class="radar-label" x="115" y="16">Problem Solving</text>
+      <text class="radar-label" x="183" y="65">Team Leadership</text>
+      <text class="radar-label" x="166" y="153">Workflow</text>
+      <text class="radar-label" x="64" y="153">Agility</text>
+      <text class="radar-label" x="43" y="65">Adaptability</text>
+    </svg>
   </div>
 </div>
 
@@ -273,7 +367,7 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
     <div class="sec-title">Experience Profile</div>
     <div class="donut-section">
       <div class="donut-wrap">
-        <canvas id="donut" width="106" height="106"></canvas>
+        <div class="donut-ring"></div>
         <div class="donut-center"><div class="donut-center-num">10+</div><div class="donut-center-lbl">Years</div></div>
       </div>
       <div class="icon-grid">
@@ -317,7 +411,62 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
       <div class="tl-legend-item"><div class="tl-legend-dot" style="background:#2D5016"></div>Data Analytics Further Education & Projects</div>
     </div>
   </div>
-  <canvas id="timelineCanvas" width="738" height="156"></canvas>
+  <div class="timeline-chart">
+    <div class="timeline-axis"></div>
+    <div class="timeline-year" style="left:24px;">2013</div>
+    <div class="timeline-year" style="left:82px;">2014</div>
+    <div class="timeline-year" style="left:139px;">2015</div>
+    <div class="timeline-year" style="left:197px;">2016</div>
+    <div class="timeline-year" style="left:254px;">2017</div>
+    <div class="timeline-year" style="left:312px;">2018</div>
+    <div class="timeline-year" style="left:369px;">2019</div>
+    <div class="timeline-year" style="left:427px;">2020</div>
+    <div class="timeline-year" style="left:484px;">2021</div>
+    <div class="timeline-year" style="left:542px;">2022</div>
+    <div class="timeline-year" style="left:599px;">2023</div>
+    <div class="timeline-year" style="left:657px;">2024</div>
+    <div class="timeline-year" style="left:714px;">2025</div>
+    <div class="timeline-role top" style="left:48px;color:#B8922A;">
+      <div class="tl-labels"><div class="tl-label-name" style="color:#B8922A;">Casa Negra</div><div class="tl-label-sub">Barback → Bartender</div></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#B8922A;"></div><div class="tl-bar" style="width:69px;background:#B8922A;"></div></div>
+      <div class="tl-stem"></div>
+    </div>
+    <div class="timeline-role bottom" style="left:139px;color:#7D1A1A;">
+      <div class="tl-stem"></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:41px;background:#7D1A1A;"></div></div>
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Santa María</div><div class="tl-label-sub">Head Barkeeper</div></div>
+    </div>
+    <div class="timeline-role top" style="left:223px;color:#7D1A1A;">
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">The Butcher</div><div class="tl-label-sub">Head Bartender</div></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:66px;background:#7D1A1A;"></div></div>
+      <div class="tl-stem"></div>
+    </div>
+    <div class="timeline-role bottom" style="left:283px;color:#7D1A1A;">
+      <div class="tl-stem"></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:30px;background:#7D1A1A;"></div></div>
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Hefner Bar</div><div class="tl-label-sub">Barkeeper</div></div>
+    </div>
+    <div class="timeline-role top" style="left:324px;color:#7D1A1A;">
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Monkey Bar</div><div class="tl-label-sub">Maître D'</div></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:65px;background:#7D1A1A;"></div></div>
+      <div class="tl-stem"></div>
+    </div>
+    <div class="timeline-role bottom" style="left:403px;color:#7D1A1A;">
+      <div class="tl-stem"></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:17px;background:#7D1A1A;"></div></div>
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">FREA</div><div class="tl-label-sub">Head Barkeeper</div></div>
+    </div>
+    <div class="timeline-role bottom" style="left:432px;color:#7D1A1A;">
+      <div class="tl-stem"></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:161px;background:#7D1A1A;"></div></div>
+      <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Kink Bar</div><div class="tl-label-sub">Senior Bartender</div></div>
+    </div>
+    <div class="timeline-role top" style="left:692px;color:#2D5016;">
+      <div class="tl-labels"><div class="tl-label-name" style="color:#2D5016;">DataCraft</div><div class="tl-label-sub">Data Analyst ↗</div></div>
+      <div class="tl-dot-bar"><div class="tl-dot" style="background:#2D5016;"></div><div class="tl-bar active" style="width:47px;background:#2D5016;"></div></div>
+      <div class="tl-stem"></div>
+    </div>
+  </div>
 </div>
 
 <div class="bottom-bar">
@@ -326,241 +475,6 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 </div>
 </div>
 
-<script>
-window.addEventListener('load', function () {
-
-/* ── Radar ────────────────────────────────────────────────── */
-function drawRadar(id, labels, values, stroke, fill) {
-  var canvas = document.getElementById(id);
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var W = canvas.width, H = canvas.height;
-  var cx = W/2, cy = H/2 + 6, R = Math.min(W,H)/2 - 34;
-  var n = labels.length, a0 = -Math.PI/2, step = Math.PI*2/n;
-  function pt(i,p){var a=a0+i*step;return[cx+Math.cos(a)*R*p,cy+Math.sin(a)*R*p];}
-  function grid(){
-    [0.33,0.66,1].forEach(function(p){
-      ctx.beginPath();
-      for(var i=0;i<=n;i++){var xy=pt(i%n,p);i===0?ctx.moveTo(xy[0],xy[1]):ctx.lineTo(xy[0],xy[1]);}
-      ctx.closePath();ctx.strokeStyle='rgba(0,0,0,0.09)';ctx.lineWidth=p===1?1:0.7;ctx.stroke();
-    });
-    for(var i=0;i<n;i++){var xy=pt(i,1);ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(xy[0],xy[1]);ctx.strokeStyle='rgba(0,0,0,0.08)';ctx.lineWidth=0.7;ctx.stroke();}
-  }
-  function shape(p){
-    ctx.clearRect(0,0,W,H);grid();
-    ctx.beginPath();
-    for(var i=0;i<n;i++){var xy=pt(i,values[i]*p);i===0?ctx.moveTo(xy[0],xy[1]):ctx.lineTo(xy[0],xy[1]);}
-    ctx.closePath();ctx.fillStyle=fill;ctx.fill();ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();
-    for(var i=0;i<n;i++){var xy=pt(i,values[i]*p);ctx.beginPath();ctx.arc(xy[0],xy[1],3,0,Math.PI*2);ctx.fillStyle=stroke;ctx.fill();}
-    if(p>=1){
-      ctx.font='400 10px "DM Sans",sans-serif';ctx.fillStyle='#3A3530';
-      ctx.textAlign='center';ctx.textBaseline='middle';
-      for(var i=0;i<n;i++){
-        var a=a0+i*step,lx=cx+Math.cos(a)*(R+20),ly=cy+Math.sin(a)*(R+17);
-        labels[i].split('\n').forEach(function(t,ti,arr){ctx.fillText(t,lx,ly+ti*11-(arr.length-1)*5.5);});
-      }
-    }
-  }
-  var dur=900,s=performance.now();
-  function anim(now){var p=Math.min((now-s)/dur,1);shape(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(anim);else shape(1);}
-  setTimeout(function(){requestAnimationFrame(anim);},400);
-}
-drawRadar('radarProf',['Anpassung','Innovation','Sozial','Unabhängig-\nkeit','Leistung'],[0.87,0.82,0.84,0.80,0.92],'#2D5016','rgba(45,80,22,0.14)');
-drawRadar('radarPers',['Empathie','Strategie','Lernbereit-\nschaft','Kreativ','Perspektive','Emotionale\nIntelligenz'],[0.93,0.83,0.91,0.86,0.81,0.89],'#7D1A1A','rgba(125,26,26,0.11)');
-drawRadar('radarSoft',['Problem-\nlösung','Teamführung','Workflow','Agilität','Anpassungs-\nfähigkeit'],[0.80,0.80,0.80,1.00,1.00],'#B8922A','rgba(184,146,42,0.13)');
-
-/* ── Donut ────────────────────────────────────────────────── */
-function drawDonut(){
-  var canvas=document.getElementById('donut');if(!canvas)return;
-  var ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height,cx=W/2,cy=H/2,R=42,thick=12;
-  var segs=[{pct:0.65,color:'#B8922A'},{pct:0.20,color:'#2D5016'},{pct:0.15,color:'#7D1A1A'}];
-  var gap=0.025,dur=1000,start=performance.now();
-  function draw(p){
-    ctx.clearRect(0,0,W,H);
-    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.strokeStyle='#EDE5D0';ctx.lineWidth=thick;ctx.stroke();
-    var angle=-Math.PI/2;
-    segs.forEach(function(seg){
-      var sweep=(seg.pct*Math.PI*2-gap)*p;
-      ctx.beginPath();ctx.arc(cx,cy,R,angle,angle+sweep);
-      ctx.strokeStyle=seg.color;ctx.lineWidth=thick;ctx.lineCap='butt';ctx.stroke();
-      angle+=seg.pct*Math.PI*2;
-    });
-  }
-  function anim(now){var p=Math.min((now-start)/dur,1);draw(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(anim);else draw(1);}
-  requestAnimationFrame(anim);
-}
-drawDonut();
-
-/* ════════════════════════════════════════════════════════════
-   TIMELINE — TWO-STEM LOLLIPOP DESIGN
-   
-   How it works (matching the user's sketch):
-   
-   STEM 1 (vertical): rises from the axis UP (row 0) or drops DOWN
-   (row 1), ending at a filled circle — the lollipop dot.
-   Height is STAGGERED per role so labels at different levels
-   don't collide with each other.
-   
-   STEM 2 (horizontal): starts at the CENTER of that dot and
-   extends RIGHTWARD. Its length encodes the DURATION of the
-   role (longer role = longer bar). This is the "duration bar"
-   from the original sketch.
-   
-   Labels (role name + sub-title) float just beyond the dot,
-   above for row 0, below for row 1.
-   
-   Animation sequence:
-     0–40%  → axis and year ticks draw in
-     40–70% → vertical stem 1 grows from axis to dot
-     70–100%→ horizontal stem 2 (duration) grows from dot rightward
-              + labels fade in
-   ════════════════════════════════════════════════════════════ */
-function drawTimeline(){
-  var canvas=document.getElementById('timelineCanvas');
-  if(!canvas)return;
-  var ctx=canvas.getContext('2d');
-  var W=canvas.width,H=canvas.height;
-  var minY=2013,maxY=2025,span=maxY-minY;
-  var padL=24,padR=24,trackW=W-padL-padR;
-  function xOf(yr){return padL+((yr-minY)/span)*trackW;}
-
-  // Axis sits at the vertical centre of the canvas
-  // Axis at 44% — bottom 56% reserved for down-stems + year label strip
-  var axisY=H*0.44;
-
-  var gold='#B8922A',crimson='#7D1A1A',forest='#2D5016',gray='#6A6355';
-
-  // PX_PER_YEAR: how many horizontal pixels one year of duration equals.
-  // Tuned so the longest role (Kink Bar, 3 years) fills a readable length.
-  var PX_PER_YEAR = 46;
-
-  // DOT_R: radius of the lollipop circle at the tip of stem 1
-  var DOT_R = 4;
-
-  // STEM1_H: staggered heights for the vertical stems.
-  // Alternating row 0/1 with varying heights prevents label collisions.
-  // These are pixel distances from the axis to the dot centre.
-  var roles=[
-    // label, sub, start (decimal yr), end, color, row 0=above/1=below, stem1 height
-    {label:'Casa Negra',  sub:'Barback → Bartender', start:2013.42,end:2014.92,color:gold,   row:0,stemH:38},
-    {label:'Santa María', sub:'Head Barkeeper',       start:2015,   end:2016,   color:crimson,row:1,stemH:32},
-    {label:'The Butcher', sub:'Head Bartender',       start:2016,   end:2017,   color:crimson,row:0,stemH:48},
-    {label:'Hefner Bar',  sub:'Barkeeper',            start:2017,   end:2017.75,color:crimson,row:1,stemH:46},
-    {label:'Monkey Bar',  sub:'Chef de Rang',         start:2017,   end:2019,   color:crimson,row:0,stemH:30},
-    {label:'FREA',        sub:'Head Barkeeper',       start:2019,   end:2019.75,color:crimson,row:1,stemH:58},
-    {label:'Kink Bar',    sub:'Senior Bartender',     start:2020,   end:2023,   color:crimson,row:1,stemH:36},
-    {label:'DataCraft',   sub:'Data Analyst ↗',      start:2024,   end:2025,   color:forest, row:0,stemH:44,active:true}
-  ];
-
-  function draw(p){
-    ctx.clearRect(0,0,W,H);
-
-    // ── Axis line ──────────────────────────────────────────
-    ctx.beginPath();ctx.moveTo(padL,axisY);ctx.lineTo(W-padR,axisY);
-    ctx.strokeStyle='rgba(0,0,0,0.15)';ctx.lineWidth=1;ctx.stroke();
-
-    // ── Year ticks and labels ──────────────────────────────
-    for(var yr=minY;yr<=maxY;yr++){
-      var x=xOf(yr);
-      ctx.beginPath();ctx.moveTo(x,axisY-4);ctx.lineTo(x,axisY+4);
-      ctx.strokeStyle='rgba(0,0,0,0.2)';ctx.lineWidth=1;ctx.stroke();
-      ctx.font='500 8px "DM Mono",monospace';
-      ctx.fillStyle=gray;ctx.textAlign='center';
-      // Year labels: above axis for row 0 stems, below for row 1.
-      // We place them all below to keep the area above the axis clean.
-      // Year labels at bottom strip — never overlaps any stem
-      ctx.fillText(yr,x+11,H-75);
-    }
-
-    // ── Per-role drawing ───────────────────────────────────
-    roles.forEach(function(r){
-      var x0 = xOf(r.start);  // x position of the start date (stem1 base)
-      var dir = r.row===0 ? -1 : 1;  // -1 = up, +1 = down
-
-      // ── Phase 1 (p: 0→0.5): stem 1 grows from axis to dot ──
-      var stem1Progress = Math.min(p / 0.5, 1);
-      var currentStem1H = r.stemH * stem1Progress;
-      var dotY = axisY + dir * r.stemH;  // final dot y position
-      var currentDotY = axisY + dir * currentStem1H;  // animated dot y
-
-      // Draw stem 1 line
-      ctx.beginPath();ctx.moveTo(x0,axisY);ctx.lineTo(x0,currentDotY);
-      ctx.strokeStyle=r.color;ctx.lineWidth=1.5;
-      ctx.globalAlpha=0.7;ctx.stroke();ctx.globalAlpha=1;
-
-      // Draw dot at current tip of stem 1
-      ctx.beginPath();ctx.arc(x0,currentDotY,DOT_R,0,Math.PI*2);
-      ctx.fillStyle=r.color;ctx.fill();
-
-      // Also draw a small anchor dot on the axis at start date
-      ctx.beginPath();ctx.arc(x0,axisY,2.5,0,Math.PI*2);
-      ctx.fillStyle=r.color;ctx.fill();
-
-      // ── Phase 2 (p: 0.5→1): stem 2 (duration) grows rightward ──
-      if(p > 0.5 && stem1Progress >= 1){
-        var stem2Progress = Math.min((p - 0.5) / 0.5, 1);
-        var durationPx = (r.end - r.start) * PX_PER_YEAR;
-        var currentDurationPx = durationPx * stem2Progress;
-
-        // Duration bar: a horizontal line from dot centre, going RIGHT
-        ctx.beginPath();
-        ctx.moveTo(x0, dotY);
-        ctx.lineTo(x0 + currentDurationPx, dotY);
-        ctx.strokeStyle=r.color;
-        ctx.lineWidth=r.active ? 3 : 2.5;
-        ctx.lineCap='round';
-        ctx.stroke();
-        ctx.lineCap='butt';
-
-        // End cap dot on duration bar
-        if(stem2Progress > 0.8){
-          ctx.beginPath();
-          ctx.arc(x0+currentDurationPx, dotY, 2.5, 0, Math.PI*2);
-          ctx.fillStyle=r.color;ctx.fill();
-        }
-
-        // Labels fade in as duration bar draws
-        if(stem2Progress > 0.4){
-          var labelAlpha = Math.min((stem2Progress-0.4)/0.6, 1);
-          ctx.globalAlpha=labelAlpha;
-
-          // Label position: just beyond dot, perpendicular to stem 2
-          // Row 0 (stem goes up): labels sit ABOVE the dot
-          // Row 1 (stem goes down): labels sit BELOW the dot
-          var nameY  = r.row===0 ? dotY - DOT_R - 4  : dotY + DOT_R + 4;
-          var subY   = r.row===0 ? nameY - 10         : nameY + 10;
-          var nameBaseline = r.row===0 ? 'bottom' : 'top';
-          var subBaseline  = r.row===0 ? 'bottom' : 'top';
-
-          ctx.font='600 9px "DM Sans",sans-serif';
-          ctx.fillStyle=r.color;
-          ctx.textAlign='left';
-          ctx.textBaseline=nameBaseline;
-          ctx.fillText(r.label, x0+DOT_R+3, nameY);
-
-          ctx.font='300 8px "DM Sans",sans-serif';
-          ctx.fillStyle=gray;
-          ctx.textBaseline=subBaseline;
-          ctx.fillText(r.sub, x0+DOT_R+3, subY);
-
-          ctx.globalAlpha=1;
-        }
-      }
-    });
-  }
-
-  var dur=1600,start=performance.now();
-  function anim(now){
-    var p=Math.min((now-start)/dur,1);
-    draw(1-Math.pow(1-p,3));
-    if(p<1)requestAnimationFrame(anim);else draw(1);
-  }
-  setTimeout(function(){requestAnimationFrame(anim);},600);
-}
-drawTimeline();
-
-});
-</script>
 
 </body>
 </html>
