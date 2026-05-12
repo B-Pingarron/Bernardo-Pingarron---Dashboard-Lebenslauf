@@ -69,19 +69,23 @@
     "timeline_legend_1": "London",
     "timeline_legend_2": "Berlin",
     "timeline_legend_3": "Data Analytics Further Education & Projects",
-    "chart_data": {
-        "radar_prof": ["Adaptability", "Innovation", "Social", "Independence", "Performance"],
-        "radar_pers": ["Empathy", "Strategy", "Eagerness to Learn", "Creative", "Perspective", "Emotional Intelligence"],
-        "radar_soft": ["Problem Solving", "Team Leadership", "Workflow", "Agility", "Adaptability"],
-        "timeline": [
-            {"label": "Casa Negra", "sub": "Barback → Bartender", "start": 2013.42, "end": 2014.92, "color": "gold", "row": 0, "stemH": 38},
-            {"label": "Santa María", "sub": "Head Barkeeper", "start": 2015, "end": 2016, "color": "crimson", "row": 1, "stemH": 32},
-            {"label": "The Butcher", "sub": "Head Bartender", "start": 2016, "end": 2017, "color": "crimson", "row": 0, "stemH": 48},
-            {"label": "Hefner Bar", "sub": "Barkeeper", "start": 2017, "end": 2017.75, "color": "crimson", "row": 1, "stemH": 46},
-            {"label": "Monkey Bar", "sub": "Maître D'", "start": 2017, "end": 2019, "color": "crimson", "row": 0, "stemH": 30},
-            {"label": "FREA", "sub": "Head Barkeeper", "start": 2019, "end": 2019.75, "color": "crimson", "row": 1, "stemH": 58},
-            {"label": "Kink Bar", "sub": "Senior Bartender", "start": 2020, "end": 2023, "color": "crimson", "row": 1, "stemH": 36},
-            {"label": "DataCraft", "sub": "Data Analyst ↗", "start": 2024, "end": 2025, "color": "forest", "row": 0, "stemH": 44, "active": true}
-        ]
-    }
+    "radar_1_axis_1": "Adaptability",
+    "radar_1_axis_2": "Innovation",
+    "radar_1_axis_3": "Social",
+    "radar_1_axis_4": "Independence",
+    "radar_1_axis_5": "Performance",
+    "radar_2_axis_1": "Empathy",
+    "radar_2_axis_2": "Strategy",
+    "radar_2_axis_3": "Eagerness to Learn",
+    "radar_2_axis_4": "Creative",
+    "radar_2_axis_5": "Perspective",
+    "radar_2_axis_6": "Emotional Intelligence",
+    "radar_3_axis_1": "Problem Solving",
+    "radar_3_axis_2": "Team Leadership",
+    "radar_3_axis_3": "Workflow",
+    "radar_3_axis_4": "Agility",
+    "radar_3_axis_5": "Adaptability",
+    "donut_seg_1_pct": "65",
+    "donut_seg_2_pct": "20",
+    "donut_seg_3_pct": "15"
 }

@@ -69,19 +69,23 @@
     "timeline_legend_1": "Londres",
     "timeline_legend_2": "Berlín",
     "timeline_legend_3": "Formación Continua en Data Analytics y Proyectos",
-    "chart_data": {
-        "radar_prof": ["Adaptación", "Innovación", "Social", "Independencia", "Rendimiento"],
-        "radar_pers": ["Empatía", "Estrategia", "Aprendizaje", "Creatividad", "Perspectiva", "Inteligencia Emocional"],
-        "radar_soft": ["Resolución", "Liderazgo", "Flujo de Trabajo", "Agilidad", "Adaptabilidad"],
-        "timeline": [
-            {"label": "Casa Negra", "sub": "Barback → Bartender", "start": 2013.42, "end": 2014.92, "color": "gold", "row": 0, "stemH": 38},
-            {"label": "Santa María", "sub": "Head Barkeeper", "start": 2015, "end": 2016, "color": "crimson", "row": 1, "stemH": 32},
-            {"label": "The Butcher", "sub": "Head Bartender", "start": 2016, "end": 2017, "color": "crimson", "row": 0, "stemH": 48},
-            {"label": "Hefner Bar", "sub": "Barkeeper", "start": 2017, "end": 2017.75, "color": "crimson", "row": 1, "stemH": 46},
-            {"label": "Monkey Bar", "sub": "Maître D'", "start": 2017, "end": 2019, "color": "crimson", "row": 0, "stemH": 30},
-            {"label": "FREA", "sub": "Head Barkeeper", "start": 2019, "end": 2019.75, "color": "crimson", "row": 1, "stemH": 58},
-            {"label": "Kink Bar", "sub": "Senior Bartender", "start": 2020, "end": 2023, "color": "crimson", "row": 1, "stemH": 36},
-            {"label": "DataCraft", "sub": "Data Analyst ↗", "start": 2024, "end": 2025, "color": "forest", "row": 0, "stemH": 44, "active": true}
-        ]
-    }
+    "radar_1_axis_1": "Adaptación",
+    "radar_1_axis_2": "Innovación",
+    "radar_1_axis_3": "Social",
+    "radar_1_axis_4": "Independencia",
+    "radar_1_axis_5": "Rendimiento",
+    "radar_2_axis_1": "Empatía",
+    "radar_2_axis_2": "Estrategia",
+    "radar_2_axis_3": "Aprendizaje",
+    "radar_2_axis_4": "Creatividad",
+    "radar_2_axis_5": "Perspectiva",
+    "radar_2_axis_6": "Inteligencia Emocional",
+    "radar_3_axis_1": "Resolución",
+    "radar_3_axis_2": "Liderazgo",
+    "radar_3_axis_3": "Flujo de Trabajo",
+    "radar_3_axis_4": "Agilidad",
+    "radar_3_axis_5": "Adaptabilidad",
+    "donut_seg_1_pct": "65",
+    "donut_seg_2_pct": "20",
+    "donut_seg_3_pct": "15"
 }

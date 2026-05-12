@@ -69,20 +69,24 @@
     "timeline_legend_1": "London",
     "timeline_legend_2": "Berlin",
     "timeline_legend_3": "Data Analytics Weiterbildung & Projekte",
-    "chart_data": {
-        "radar_prof": ["Anpassung", "Innovation", "Sozial", "Unabhängigkeit", "Leistung"],
-        "radar_pers": ["Empathie", "Strategie", "Lernbereitschaft", "Kreativ", "Perspektive", "Emotionale Intelligenz"],
-        "radar_soft": ["Problem Lösung", "Teamführung", "Workflow", "Agilität", "Anpassungsfähigkeit"],
-        "timeline": [
-            {"label": "Casa Negra", "sub": "Barback → Bartender", "start": 2013.42, "end": 2014.92, "color": "gold", "row": 0, "stemH": 38},
-            {"label": "Santa María", "sub": "Head Barkeeper", "start": 2015, "end": 2016, "color": "crimson", "row": 1, "stemH": 32},
-            {"label": "The Butcher", "sub": "Head Bartender", "start": 2016, "end": 2017, "color": "crimson", "row": 0, "stemH": 48},
-            {"label": "Hefner Bar", "sub": "Barkeeper", "start": 2017, "end": 2017.75, "color": "crimson", "row": 1, "stemH": 46},
-            {"label": "Monkey Bar", "sub": "Chef de Rang", "start": 2017, "end": 2019, "color": "crimson", "row": 0, "stemH": 30},
-            {"label": "FREA", "sub": "Head Barkeeper", "start": 2019, "end": 2019.75, "color": "crimson", "row": 1, "stemH": 58},
-            {"label": "Kink Bar", "sub": "Senior Bartender", "start": 2020, "end": 2023, "color": "crimson", "row": 1, "stemH": 36},
-            {"label": "DataCraft", "sub": "Data Analyst ↗", "start": 2024, "end": 2025, "color": "forest", "row": 0, "stemH": 44, "active": true}
-        ]
-    }
+    "radar_1_axis_1": "Anpassung",
+    "radar_1_axis_2": "Innovation",
+    "radar_1_axis_3": "Sozial",
+    "radar_1_axis_4": "Unabhängigkeit",
+    "radar_1_axis_5": "Leistung",
+    "radar_2_axis_1": "Empathie",
+    "radar_2_axis_2": "Strategie",
+    "radar_2_axis_3": "Lernbereitschaft",
+    "radar_2_axis_4": "Kreativ",
+    "radar_2_axis_5": "Perspektive",
+    "radar_2_axis_6": "Emotionale Intelligenz",
+    "radar_3_axis_1": "Problem Lösung",
+    "radar_3_axis_2": "Teamführung",
+    "radar_3_axis_3": "Workflow",
+    "radar_3_axis_4": "Agilität",
+    "radar_3_axis_5": "Anpassungsfähigkeit",
+    "donut_seg_1_pct": "65",
+    "donut_seg_2_pct": "20",
+    "donut_seg_3_pct": "15"
 }
     
