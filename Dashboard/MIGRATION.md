@@ -1,6 +1,6 @@
 # Dashboard Chart Migration — Canvas JS → HTML/CSS
 
-**Status:** COMPLETE ✅
+**Status:** COMPLETE ✅ (chart migration done, layout fixes next)
 **Started:** May 12, 2026
 **Plan:** `.sisyphus/plans/2026-05-12-html-css-chart-migration.md`
 
