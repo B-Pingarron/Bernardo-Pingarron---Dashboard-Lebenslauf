@@ -1,6 +1,6 @@
 # Dashboard Chart Migration — Canvas JS → HTML/CSS
 
-**Status:** IN PROGRESS
+**Status:** COMPLETE ✅
 **Started:** May 12, 2026
 **Plan:** `.sisyphus/plans/2026-05-12-html-css-chart-migration.md`
 
@@ -206,14 +206,14 @@ Object.entries(translations).forEach(([key, value]) => {
 
 | Task | Status | Commit |
 |------|--------|--------|
-| 1. Delete orphaned SVGs | ⏳ Pending | — |
-| 2. Add chart label keys to JSONs | ⏳ Pending | — |
-| 3. Replace Canvas radars with inline SVG | ⏳ Pending | — |
-| 4. Replace Canvas donut with CSS conic-gradient | ⏳ Pending | — |
-| 5. Replace Canvas timeline with CSS grid | ⏳ Pending | — |
-| 6. Simplify build.js | ⏳ Pending | — |
-| 7. Remove `<script>` from template | ⏳ Pending | — |
-| 8. Final verification | ⏳ Pending | — |
+| 1. Delete orphaned SVGs | ✅ Done | `a54eff8` |
+| 2. Add chart label keys to JSONs | ✅ Done | `1b2f191` |
+| 3. Replace Canvas radars with inline SVG | ✅ Done | `5818fc0` |
+| 4. Replace Canvas donut with CSS conic-gradient | ✅ Done | `5818fc0` |
+| 5. Replace Canvas timeline with CSS grid | ✅ Done | `5818fc0` |
+| 6. Simplify build.js | ✅ Done | `5818fc0` |
+| 7. Remove `<script>` from template | ✅ Done | `5818fc0` |
+| 8. Final verification | ✅ Done | — |
 
 ---
 
