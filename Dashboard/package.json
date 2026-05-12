@@ -1,0 +1,11 @@
+{
+  "name": "pingarron-bernardo-dashboard-lebenslauf",
+  "version": "1.0.0",
+  "description": "Bernardo Pingarrón's dashboard-style resume with multi-language support (DE/EN/ES)",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "keywords": ["resume", "dashboard", "i18n"],
+  "author": "Bernardo Pingarrón",
+  "license": "MIT"
+}

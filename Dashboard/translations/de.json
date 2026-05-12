@@ -68,6 +68,21 @@
     "section_005_label": "// 005 · Karriere-Timeline",
     "timeline_legend_1": "London",
     "timeline_legend_2": "Berlin",
-    "timeline_legend_3": "Data Analytics Weiterbildung & Projekte"
+    "timeline_legend_3": "Data Analytics Weiterbildung & Projekte",
+    "chart_data": {
+        "radar_prof": ["Anpassung", "Innovation", "Sozial", "Unabhängigkeit", "Leistung"],
+        "radar_pers": ["Empathie", "Strategie", "Lernbereitschaft", "Kreativ", "Perspektive", "Emotionale Intelligenz"],
+        "radar_soft": ["Problem Lösung", "Teamführung", "Workflow", "Agilität", "Anpassungsfähigkeit"],
+        "timeline": [
+            {"label": "Casa Negra", "sub": "Barback → Bartender", "start": 2013.42, "end": 2014.92, "color": "gold", "row": 0, "stemH": 38},
+            {"label": "Santa María", "sub": "Head Barkeeper", "start": 2015, "end": 2016, "color": "crimson", "row": 1, "stemH": 32},
+            {"label": "The Butcher", "sub": "Head Bartender", "start": 2016, "end": 2017, "color": "crimson", "row": 0, "stemH": 48},
+            {"label": "Hefner Bar", "sub": "Barkeeper", "start": 2017, "end": 2017.75, "color": "crimson", "row": 1, "stemH": 46},
+            {"label": "Monkey Bar", "sub": "Chef de Rang", "start": 2017, "end": 2019, "color": "crimson", "row": 0, "stemH": 30},
+            {"label": "FREA", "sub": "Head Barkeeper", "start": 2019, "end": 2019.75, "color": "crimson", "row": 1, "stemH": 58},
+            {"label": "Kink Bar", "sub": "Senior Bartender", "start": 2020, "end": 2023, "color": "crimson", "row": 1, "stemH": 36},
+            {"label": "DataCraft", "sub": "Data Analyst ↗", "start": 2024, "end": 2025, "color": "forest", "row": 0, "stemH": 44, "active": true}
+        ]
+    }
 }
     

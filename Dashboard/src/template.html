@@ -365,9 +365,9 @@ function drawRadar(id, labels, values, stroke, fill) {
   function anim(now){var p=Math.min((now-s)/dur,1);shape(1-Math.pow(1-p,3));if(p<1)requestAnimationFrame(anim);else shape(1);}
   setTimeout(function(){requestAnimationFrame(anim);},400);
 }
-drawRadar('radarProf',['Anpassung','Innovation','Sozial','Unabhängig-\nkeit','Leistung'],[0.87,0.82,0.84,0.80,0.92],'#2D5016','rgba(45,80,22,0.14)');
-drawRadar('radarPers',['Empathie','Strategie','Lernbereit-\nschaft','Kreativ','Perspektive','Emotionale\nIntelligenz'],[0.93,0.83,0.91,0.86,0.81,0.89],'#7D1A1A','rgba(125,26,26,0.11)');
-drawRadar('radarSoft',['Problem-\nlösung','Teamführung','Workflow','Agilität','Anpassungs-\nfähigkeit'],[0.80,0.80,0.80,1.00,1.00],'#B8922A','rgba(184,146,42,0.13)');
+drawRadar('radarProf',CHART_DATA.radar_prof,[0.87,0.82,0.84,0.80,0.92],'#2D5016','rgba(45,80,22,0.14)');
+drawRadar('radarPers',CHART_DATA.radar_pers,[0.93,0.83,0.91,0.86,0.81,0.89],'#7D1A1A','rgba(125,26,26,0.11)');
+drawRadar('radarSoft',CHART_DATA.radar_soft,[0.80,0.80,0.80,1.00,1.00],'#B8922A','rgba(184,146,42,0.13)');
 
 /* ── Donut ────────────────────────────────────────────────── */
 function drawDonut(){
@@ -440,17 +440,7 @@ function drawTimeline(){
   // STEM1_H: staggered heights for the vertical stems.
   // Alternating row 0/1 with varying heights prevents label collisions.
   // These are pixel distances from the axis to the dot centre.
-  var roles=[
-    // label, sub, start (decimal yr), end, color, row 0=above/1=below, stem1 height
-    {label:'Casa Negra',  sub:'Barback → Bartender', start:2013.42,end:2014.92,color:gold,   row:0,stemH:38},
-    {label:'Santa María', sub:'Head Barkeeper',       start:2015,   end:2016,   color:crimson,row:1,stemH:32},
-    {label:'The Butcher', sub:'Head Bartender',       start:2016,   end:2017,   color:crimson,row:0,stemH:48},
-    {label:'Hefner Bar',  sub:'Barkeeper',            start:2017,   end:2017.75,color:crimson,row:1,stemH:46},
-    {label:'Monkey Bar',  sub:'Chef de Rang',         start:2017,   end:2019,   color:crimson,row:0,stemH:30},
-    {label:'FREA',        sub:'Head Barkeeper',       start:2019,   end:2019.75,color:crimson,row:1,stemH:58},
-    {label:'Kink Bar',    sub:'Senior Bartender',     start:2020,   end:2023,   color:crimson,row:1,stemH:36},
-    {label:'DataCraft',   sub:'Data Analyst ↗',      start:2024,   end:2025,   color:forest, row:0,stemH:44,active:true}
-  ];
+  var roles = CHART_DATA.timeline;
 
   function draw(p){
     ctx.clearRect(0,0,W,H);
