@@ -18,12 +18,12 @@
 }
 body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;align-items:center;padding:28px 0 48px;gap:14px;min-height:100vh;}
 .print-hint{background:var(--forest);color:var(--cream);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 20px;}
-.a4{width:794px;height:1123px;background:var(--cream);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 12px 56px rgba(0,0,0,.32);}
+.a4{width:794px;height:1123px;max-height:1123px;background:var(--cream);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 12px 56px rgba(0,0,0,.32);}
 @media print{.a4{width:210mm;height:297mm;box-shadow:none;}}
 .accent-bar{height:5px;background:linear-gradient(90deg,var(--forest) 55%,var(--crimson) 100%);flex-shrink:0;}
 
-/* Header */
-.header{display:grid;grid-template-columns:1fr 118px;align-items:center;padding:16px var(--pad) 13px;border-bottom:1.5px solid var(--forest);gap:14px;flex-shrink:0;}
+/* Header — no photo, full width */
+.header{display:grid;grid-template-columns:1fr;align-items:center;padding:16px var(--pad) 13px;border-bottom:1.5px solid var(--forest);flex-shrink:0;}
 .eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--crimson);margin-bottom:3px;}
 .name{font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:.88;color:var(--charcoal);letter-spacing:-1.5px;}
 .name span{color:var(--forest);}
@@ -34,8 +34,6 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .c-item svg{width:10px;height:10px;fill:var(--forest);flex-shrink:0;}
 .c-item a{color:inherit;text-decoration:none;}
 .c-item a:hover{color:var(--forest);}
-.photo-wrap{width:108px;height:108px;border-radius:50%;border:2.5px solid var(--forest);box-shadow:5px 5px 0 var(--crimson);background:var(--cream-mid);display:flex;align-items:center;justify-content:center;justify-self:end;overflow:hidden;}
-.photo-wrap svg{width:56px;height:56px;fill:rgba(45,80,22,.22);}
 
 /* KPI */
 .kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1.5px solid var(--forest);flex-shrink:0;}
@@ -58,49 +56,50 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .sec-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--crimson);margin-bottom:1px;}
 .sec-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--charcoal);padding-bottom:5px;border-bottom:1px solid var(--cream-dark);margin-bottom:4px;}
 
-/* PIP BAND */
-.pip-band{flex-shrink:0;padding:8px var(--pad) 0;border-bottom:1.5px solid var(--cream-dark);}
-.pip-band-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+/* PIP BAND — more bottom padding */
+.pip-band{flex-shrink:0;padding:8px var(--pad) 14px;border-bottom:1.5px solid var(--cream-dark);overflow:hidden;}
+.pip-band-header{display:flex;justify-content:flex-start;gap:12px;align-items:baseline;margin-bottom:4px;}
 .pip-band-subtitle{font-family:'DM Mono',monospace;font-size:7.5px;color:var(--light-gray);letter-spacing:.5px;}
-.pip-row-wrap{display:flex;align-items:stretch;margin-bottom:8px;}
-.pip-half{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0;}
-.pip-half-lbl{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mid-gray);padding-bottom:3px;border-bottom:1px dotted var(--cream-dark);}
-.pip-half-sep{width:1px;background:var(--cream-dark);margin:0 10px;flex-shrink:0;}
-.pip-cols{display:flex;gap:0;align-items:flex-start;margin-top:4px;}
-.pip-col{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;min-width:0;}
-.pip-col-name{font-family:'DM Mono',monospace;font-size:8px;color:var(--text-sub);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;}
-.pip-2x5{display:grid;grid-template-columns:repeat(5,9px);grid-template-rows:repeat(2,9px);gap:2.5px;}
+.pip-row-wrap{display:flex;align-items:flex-start;gap:12px;padding-bottom:6px;}
+.pip-half{display:flex;flex-direction:column;gap:1px;min-width:0;min-height:0;align-self:start;flex:1;}
+.pip-half-lbl{font-family:'DM Mono',monospace;font-size:7.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mid-gray);padding-bottom:4px;border-bottom:1px dotted var(--cream-dark);margin-bottom:4px;}
+.pip-half-sep{width:1px;background:var(--cream-dark);flex-shrink:0;align-self:stretch;}
+.pip-cols{display:flex;flex-direction:column;gap:4px;align-items:flex-start;margin-top:0;}
+.pip-col{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;flex:1;}
+.pip-col-name{font-family:'DM Mono',monospace;font-size:7px;color:var(--text-sub);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;}
+.pip-2x5{display:grid;grid-template-columns:repeat(10,9px);grid-template-rows:1fr;gap:4.25px;}
 .p{width:9px;height:9px;border-radius:1px;border:1.5px solid var(--cream-dark);background:transparent;}
 .p.cr{background:var(--crimson);border-color:var(--crimson);}
 .p.fo{background:var(--forest);border-color:var(--forest);}
 .p.go{background:var(--gold);border-color:var(--gold);}
 .p.la{background:var(--forest);border-color:var(--forest);border-radius:50%;}
 
-/* ATS block — two short lines, no orphan wrap */
+/* ATS block — pushed down with more margin */
 .ats-block{
-  font-family:'DM Mono',monospace;font-size:6.5px;color:var(--light-gray);
-  letter-spacing:.3px;padding:5px 0 8px;
+  font-family:'DM Mono',monospace;font-size:5.5px;color:var(--light-gray);
+  letter-spacing:.3px;padding:2px 0 1px;margin-top:10px;
   border-top:1px dotted var(--cream-dark);line-height:1.8;
 }
 
-/* RADAR BAND */
-.radar-band{flex-shrink:0;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;border-bottom:1.5px solid var(--cream-dark);padding:8px 0 6px;}
-.radar-col{display:flex;flex-direction:column;align-items:center;padding:0 10px;gap:2px;}
+/* RADAR BAND — more space between section label and radar titles */
+.radar-band{flex-shrink:0;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;border-bottom:1.5px solid var(--cream-dark);padding:8px 0 4px;}
+.radar-col{display:flex;flex-direction:column;align-items:center;padding:0 10px;gap:4px;}
 .radar-col-lbl{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-sub);text-align:center;margin-bottom:2px;}
 .radar-band-sep{background:var(--cream-dark);}
 
-/* BOTTOM SECTION */
-.bottom-cols{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0;}
-.bottom-left{border-right:1.5px solid var(--cream-dark);padding:11px var(--pad) 8px;}
-.bottom-right{padding:11px var(--pad) 8px;}
+/* BOTTOM SECTION — compact */
+.bottom-cols{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0;padding-top:2px;}
+.bottom-left{border-right:1.5px solid var(--cream-dark);padding:5px var(--pad) 3px;display:flex;flex-direction:column;}
+.bottom-right{padding:5px var(--pad) 3px;}
 
 /* Donut */
-.donut-section{display:flex;align-items:center;gap:16px;margin-top:5px;}
+.donut-section{display:flex;align-items:center;gap:16px;}
+.donut-spacer{flex:1;display:flex;align-items:center;}
 .donut-wrap{position:relative;flex-shrink:0;}
 .donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;}
 .donut-center-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--charcoal);line-height:1;}
 .donut-center-lbl{font-family:'DM Mono',monospace;font-size:7px;letter-spacing:1px;color:var(--light-gray);text-transform:uppercase;margin-top:2px;}
-.icon-grid{display:flex;flex-direction:column;gap:8px;flex:1;}
+.icon-grid{display:flex;flex-direction:column;gap:6px;flex:1;}
 .icon-row{display:flex;align-items:center;gap:8px;}
 .icon-box{width:30px;height:30px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:2px;}
 .icon-box svg{width:15px;height:15px;}
@@ -119,7 +118,7 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .icon-pct.lang{color:var(--crimson);}
 
 /* Education */
-.edu-list{display:flex;flex-direction:column;gap:9px;margin-top:5px;}
+.edu-list{display:flex;flex-direction:column;gap:7px;margin-top:5px;}
 .edu-item{padding-left:9px;}
 .edu-item.fo{border-left:2.5px solid var(--forest);}
 .edu-item.go{border-left:2.5px solid var(--gold);}
@@ -143,36 +142,42 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .bottom-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:10px;color:var(--cream);opacity:.9;}
 .bottom-mono{font-family:'DM Mono',monospace;font-size:8px;color:var(--gold);letter-spacing:1px;}
 
-/* Radar SVG */
+/* Radar SVG — FIXED label alignment */
 .radar-svg{width:230px;height:168px;}
-.radar-svg .grid-line{fill:none;stroke:rgba(0,0,0,0.09);stroke-width:0.7;}
-.radar-svg .grid-line-outer{fill:none;stroke:rgba(0,0,0,0.09);stroke-width:1;}
-.radar-svg .axis-line{fill:none;stroke:rgba(0,0,0,0.08);stroke-width:0.7;}
+.radar-svg .grid-poly{fill:none;stroke:rgba(0,0,0,0.07);stroke-width:0.6;}
+.radar-svg .axis-line{fill:none;stroke:rgba(0,0,0,0.07);stroke-width:0.6;}
 .radar-svg .radar-shape{stroke-width:2;}
 .radar-svg .radar-dot{r:3;}
-.radar-svg .radar-label{font:400 10px "DM Sans",sans-serif;fill:#3A3530;text-anchor:middle;dominant-baseline:middle;}
+.radar-svg .radar-label{font:400 8px "DM Sans",sans-serif;fill:#3A3530;}
+.radar-svg .radar-label.top{text-anchor:middle;dominant-baseline:auto;}
+.radar-svg .radar-label.top-right{text-anchor:start;dominant-baseline:middle;}
+.radar-svg .radar-label.bottom-right{text-anchor:start;dominant-baseline:hanging;}
+.radar-svg .radar-label.bottom{text-anchor:middle;dominant-baseline:hanging;}
+.radar-svg .radar-label.bottom-left{text-anchor:end;dominant-baseline:hanging;}
+.radar-svg .radar-label.top-left{text-anchor:end;dominant-baseline:middle;}
 
 /* Donut ring (CSS conic-gradient) */
 .donut-ring{width:106px;height:106px;border-radius:50%;background:conic-gradient(var(--gold) 0% 65%,var(--forest) 65% 85%,var(--crimson) 85% 100%);-webkit-mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);}
 
-/* Timeline chart (div-based) */
-.timeline-chart{position:relative;height:156px;margin-top:4px;}
-.timeline-axis{position:absolute;left:24px;right:24px;top:44%;height:1px;background:rgba(0,0,0,0.15);}
-.timeline-year{position:absolute;top:calc(44% + 8px);transform:translateX(-50%);font:500 8px "DM Mono",monospace;color:var(--mid-gray);}
-.timeline-role{position:absolute;display:flex;flex-direction:column;align-items:center;}
-.timeline-role.top .tl-dot{order:-1;}
-.timeline-role.top .tl-stem{position:absolute;width:1.5px;background:currentColor;opacity:0.7;top:0;bottom:0;left:50%;transform:translateX(-50%);}
-.timeline-role.bottom .tl-stem{position:absolute;width:1.5px;background:currentColor;opacity:0.7;top:0;bottom:0;left:50%;transform:translateX(-50%);}
-.timeline-role.top{bottom:calc(56% + 8px);}
-.timeline-role.bottom{top:calc(44% + 8px);}
-.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;position:relative;z-index:2;}
-.tl-bar{height:2.5px;border-radius:2px;flex-shrink:0;margin-top:-2.75px;}
-.tl-bar.active{height:3px;margin-top:-3px;}
-.tl-labels{position:absolute;white-space:nowrap;display:flex;flex-direction:column;}
-.timeline-role.top .tl-labels{bottom:calc(100% + 2px);}
-.timeline-role.bottom .tl-labels{top:calc(100% + 2px);}
-.tl-label-name{font:600 9px "DM Sans",sans-serif;}
-.tl-label-sub{font:300 8px "DM Sans",sans-serif;color:var(--mid-gray);}
+/* Timeline chart (div-based lollipop) — stems FROM axis, dot at TIP, labels below bar */
+.timeline-chart{position:relative;height:200px;margin-top:4px;}
+.timeline-axis{position:absolute;left:24px;right:24px;top:50%;height:2px;background:var(--cream-dark);transform:translateY(-50%);}
+.timeline-tick{position:absolute;width:1px;height:6px;background:var(--mid-gray);top:50%;transform:translateY(-50%);z-index:1;}
+.timeline-year{position:absolute;top:calc(50% + 12px);font:500 8px "DM Mono",monospace;color:var(--mid-gray);text-align:left;}
+
+.timeline-role{position:absolute;display:flex;flex-direction:column;align-items:center;gap:2px;transform:translateX(-50%);}
+.timeline-role.top{bottom:50%;}
+.timeline-role.bottom{top:50%;}
+
+.tl-stem{width:2px;flex-shrink:0;opacity:0.6;align-self:center;}
+.tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;border:2px solid var(--cream);box-shadow:0 1px 3px rgba(0,0,0,0.2);align-self:center;}
+.tl-bar{height:3px;border-radius:2px;position:absolute;left:50%;}
+.timeline-role.top .tl-bar{bottom:calc(50% + 8px);}
+.timeline-role.bottom .tl-bar{top:calc(50% + 8px);}
+
+.tl-labels{white-space:nowrap;display:flex;flex-direction:column;align-items:flex-start;margin-left:calc(50% + 6px);margin-top:5px;}
+.tl-label-name{font:600 9px "DM Sans",sans-serif;text-align:left;}
+.tl-label-sub{font:300 8px "DM Sans",sans-serif;color:var(--mid-gray);text-align:left;}
 
 </style>
 </head>
@@ -186,31 +191,24 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   <div>
     <div class="name">Bernardo <span>Pingarron</span></div>
     <div class="title-line"><strong>Python · SQL · Power BI · Data Visualization · ETL · Data Cleaning</strong></div>
-   <div class="contact-row">
-
-        <span class="c-item">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:b.pingarron.c@gmail.com" class="c-item">b.pingarron.c@gmail.com</a>
-        </span>
-
-        <span class="c-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-          <a href="https://github.com/Stringsdaemon" target="_blank" class="c-item">github.com/Stringsdaemon</a>
-        </span>
-
-        <span class="c-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          <a href="https://b-pingarron.github.io/B-Pingarron-Dashboard-Lebenslauf/" target="_blank" class="c-item">Dashboard</a>
-          ·
-          <a href="https://b-pingarron.github.io/Pingarron-Bernardo-Lebenslauf-Klassic/" target="_blank" class="c-item">Classic </a>
-        </span>
-
-        <span class="c-item">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Berlin, DE
-        </span>
-
-</div>
+    <div class="contact-row">
+      <span class="c-item">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:b.pingarron.c@gmail.com" class="c-item">b.pingarron.c@gmail.com</a>
+      </span>
+      <span class="c-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+        <a href="https://github.com/B-Pingarron" target="_blank" class="c-item">github.com/B-Pingarron</a>
+      </span>
+       <span class="c-item">
+         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+         <a href="https://b-pingarron.github.io/Pingarron-Bernardo-Lebenslauf-Klassic/" target="_blank" class="c-item">Classic</a>
+       </span>
+      <span class="c-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Berlin, DE
+      </span>
+    </div>
   </div>
 </header>
 
@@ -238,26 +236,26 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
       <div class="pip-half-lbl">Languages</div>
       <div class="pip-cols">
         <div class="pip-col"><div class="pip-col-name">Spanish</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div></div>
-        <div class="pip-col"><div class="pip-col-name">English</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div> </div>
-        <div class="pip-col"><div class="pip-col-name">German</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div	class="p la"></div> </div> </div>
+        <div class="pip-col"><div class="pip-col-name">English</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">German</div><div class="pip-2x5"><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div><div class="p la"></div></div></div>
+      </div>
     </div>
     <div class="pip-half-sep"></div>
     <div class="pip-half">
       <div class="pip-half-lbl">Visualization & Reporting</div>
       <div class="pip-cols">
         <div class="pip-col"><div class="pip-col-name">Excel</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div></div></div>
-        <div class="pip-col"><div class="pip-col-name">Power Query</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div></div> </div>
-        <div class="pip-col"><div class="pip-col-name">Power BI</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div	class="p la"></div> </div> </div>
+        <div class="pip-col"><div class="pip-col-name">Power Query</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Power BI</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
       </div>
     </div>
-  </div>
-  <div class="pip-row-wrap">
+    <div class="pip-half-sep"></div>
     <div class="pip-half">
       <div class="pip-half-lbl">Programming & Analysis</div>
       <div class="pip-cols">
-        <div class="pip-col"><div class="pip-col-name">Python</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p la"></div> </div> </div>
+        <div class="pip-col"><div class="pip-col-name">Python</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
         <div class="pip-col"><div class="pip-col-name">SQL</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
-        <div class="pip-col"><div class="pip-col-name">LLM Prompt.</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p la"></div> </div> </div>
+        <div class="pip-col"><div class="pip-col-name">LLM Prompt.</div><div class="pip-2x5"><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p fo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
       </div>
     </div>
     <div class="pip-half-sep"></div>
@@ -265,8 +263,8 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
       <div class="pip-half-lbl">Deployment & Version Control</div>
       <div class="pip-cols">
         <div class="pip-col"><div class="pip-col-name">GitHub</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
-        <div class="pip-col"><div class="pip-col-name">Streamlit</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p cr"></div></div> </div>
-        <div class="pip-col"><div class="pip-col-name">Git CLI</div><div class="pip-2x5"><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p cr"></div><div class="p la"></div> </div> </div>
+        <div class="pip-col"><div class="pip-col-name">Streamlit</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
+        <div class="pip-col"><div class="pip-col-name">Git CLI</div><div class="pip-2x5"><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p go"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div></div></div>
       </div>
     </div>
   </div>
@@ -278,46 +276,54 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   </div>
 </div>
 
-<!-- // 002 Kompetenz-Profile — radars (inline SVG) -->
+<!-- // 002 Kompetenz-Profile — radars (inline SVG) with FIXED label alignment -->
 <div class="radar-band">
   <div class="radar-col">
     <div class="sec-label" style="text-align:left;">// 002 · Competency Profile</div>
-    <div class="radar-col-lbl">Professional</div>
+    <div class="radar-col-lbl" style="margin-top:3px;">Professional</div>
     <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
-      <polygon class="grid-line" points="115,44 164.4,79.9 145.6,137.1 84.4,137.1 65.6,79.9"/>
-      <polygon class="grid-line" points="115,62 147.9,83.3 137.1,115.7 92.9,115.7 82.1,83.3"/>
-      <polygon class="grid-line-outer" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <!-- Grid (3 concentric layers) -->
+      <polygon class="grid-poly" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <polygon class="grid-poly" points="115,56.2 147.1,79.5 134.9,116.7 95.1,116.7 82.9,79.5"/>
+      <polygon class="grid-poly" points="115,74.4 129.8,85.2 124.2,102.3 105.8,102.3 100.2,85.2"/>
+      <!-- Axis lines -->
       <line class="axis-line" x1="115" y1="90" x2="115" y2="38"/>
       <line class="axis-line" x1="115" y1="90" x2="164.4" y2="73.9"/>
       <line class="axis-line" x1="115" y1="90" x2="145.6" y2="131.1"/>
       <line class="axis-line" x1="115" y1="90" x2="84.4" y2="131.1"/>
       <line class="axis-line" x1="115" y1="90" x2="65.6" y2="73.9"/>
+      <!-- Data shape -->
       <polygon class="radar-shape" fill="rgba(45,80,22,0.14)" stroke="#2D5016" points="115,42.56 159.93,77.62 136.16,127.86 93.06,121.08 81.29,78.65"/>
       <circle class="radar-dot" cx="115" cy="42.56" fill="#2D5016"/>
       <circle class="radar-dot" cx="159.93" cy="77.62" fill="#2D5016"/>
       <circle class="radar-dot" cx="136.16" cy="127.86" fill="#2D5016"/>
       <circle class="radar-dot" cx="93.06" cy="121.08" fill="#2D5016"/>
       <circle class="radar-dot" cx="81.29" cy="78.65" fill="#2D5016"/>
-      <text class="radar-label" x="115" y="16">Adaptability</text>
-      <text class="radar-label" x="183" y="65">Innovation</text>
-      <text class="radar-label" x="166" y="153">Social</text>
-      <text class="radar-label" x="64" y="153">Independence</text>
-      <text class="radar-label" x="43" y="65">Performance</text>
+      <!-- Labels -->
+      <text class="radar-label top" x="115" y="18">Adaptability</text>
+      <text class="radar-label top-right" x="172" y="72">Innovation</text>
+      <text class="radar-label bottom-right" x="155" y="148">Social</text>
+      <text class="radar-label bottom-left" x="75" y="148">Independence</text>
+      <text class="radar-label top-left" x="58" y="72">Performance</text>
     </svg>
   </div>
   <div class="radar-band-sep"></div>
   <div class="radar-col">
-    <div class="radar-col-lbl" style="margin-top:20px;">Personal</div>
+    <div class="sec-label" style="text-align:left;visibility:hidden;">// 002 · Competency Profile</div>
+    <div class="radar-col-lbl" style="margin-top:3px;">Personal</div>
     <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
-      <polygon class="grid-line" points="115,53.6 151.5,73.4 151.5,112.6 115,132.4 78.5,112.6 78.5,73.4"/>
-      <polygon class="grid-line" points="115,65.7 136.7,76.8 136.7,103.2 115,114.3 93.3,103.2 93.3,76.8"/>
-      <polygon class="grid-line-outer" points="115,44 156.9,67.5 156.9,118.5 115,142 73.1,118.5 73.1,67.5"/>
+      <!-- Grid (3 concentric layers) -->
+      <polygon class="grid-poly" points="115,44 156.9,67.5 156.9,118.5 115,142 73.1,118.5 73.1,67.5"/>
+      <polygon class="grid-poly" points="115,60.1 142.2,75.4 142.2,108.5 115,123.8 87.8,108.5 87.8,75.4"/>
+      <polygon class="grid-poly" points="115,76.2 127.6,83.3 127.6,98.6 115,105.6 102.4,98.6 102.4,83.3"/>
+      <!-- Axis lines -->
       <line class="axis-line" x1="115" y1="90" x2="115" y2="44"/>
       <line class="axis-line" x1="115" y1="90" x2="156.9" y2="67.5"/>
       <line class="axis-line" x1="115" y1="90" x2="156.9" y2="118.5"/>
       <line class="axis-line" x1="115" y1="90" x2="115" y2="142"/>
       <line class="axis-line" x1="115" y1="90" x2="73.1" y2="118.5"/>
       <line class="axis-line" x1="115" y1="90" x2="73.1" y2="67.5"/>
+      <!-- Data shape -->
       <polygon class="radar-shape" fill="rgba(125,26,26,0.11)" stroke="#7D1A1A" points="115,47.64 152.49,69.32 149.09,116.07 115,133.96 77.7,113.23 80.11,72.37"/>
       <circle class="radar-dot" cx="115" cy="47.64" fill="#7D1A1A"/>
       <circle class="radar-dot" cx="152.49" cy="69.32" fill="#7D1A1A"/>
@@ -325,37 +331,43 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
       <circle class="radar-dot" cx="115" cy="133.96" fill="#7D1A1A"/>
       <circle class="radar-dot" cx="77.7" cy="113.23" fill="#7D1A1A"/>
       <circle class="radar-dot" cx="80.11" cy="72.37" fill="#7D1A1A"/>
-      <text class="radar-label" x="115" y="26">Empathy</text>
-      <text class="radar-label" x="179" y="57">Strategy</text>
-      <text class="radar-label" x="179" y="125">Eagerness to Learn</text>
-      <text class="radar-label" x="115" y="162">Creative</text>
-      <text class="radar-label" x="51" y="125">Perspective</text>
-      <text class="radar-label" x="51" y="57">Emotional Intelligence</text>
+      <!-- Labels -->
+      <text class="radar-label top" x="115" y="26">Empathy</text>
+      <text class="radar-label top-right" x="168" y="62">Strategy</text>
+      <text class="radar-label bottom-right" x="168" y="128">Eagerness to Learn</text>
+      <text class="radar-label bottom" x="115" y="158">Creative</text>
+      <text class="radar-label bottom-left" x="62" y="128">Perspective</text>
+      <text class="radar-label top-left" x="62" y="62">Emotional Intelligence</text>
     </svg>
   </div>
   <div class="radar-band-sep"></div>
   <div class="radar-col">
-    <div class="radar-col-lbl" style="margin-top:20px;">Soft Skills</div>
+    <div class="sec-label" style="text-align:left;visibility:hidden;">// 002 · Competency Profile</div>
+    <div class="radar-col-lbl" style="margin-top:3px;">Soft Skills</div>
     <svg class="radar-svg" viewBox="0 0 230 168" xmlns="http://www.w3.org/2000/svg">
-      <polygon class="grid-line" points="115,44 164.4,79.9 145.6,137.1 84.4,137.1 65.6,79.9"/>
-      <polygon class="grid-line" points="115,62 147.9,83.3 137.1,115.7 92.9,115.7 82.1,83.3"/>
-      <polygon class="grid-line-outer" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <!-- Grid (3 concentric layers) -->
+      <polygon class="grid-poly" points="115,38 164.4,73.9 145.6,131.1 84.4,131.1 65.6,73.9"/>
+      <polygon class="grid-poly" points="115,56.2 147.1,79.5 134.9,116.7 95.1,116.7 82.9,79.5"/>
+      <polygon class="grid-poly" points="115,74.4 129.8,85.2 124.2,102.3 105.8,102.3 100.2,85.2"/>
+      <!-- Axis lines -->
       <line class="axis-line" x1="115" y1="90" x2="115" y2="38"/>
       <line class="axis-line" x1="115" y1="90" x2="164.4" y2="73.9"/>
       <line class="axis-line" x1="115" y1="90" x2="145.6" y2="131.1"/>
       <line class="axis-line" x1="115" y1="90" x2="84.4" y2="131.1"/>
       <line class="axis-line" x1="115" y1="90" x2="65.6" y2="73.9"/>
+      <!-- Data shape -->
       <polygon class="radar-shape" fill="rgba(184,146,42,0.13)" stroke="#B8922A" points="115,47.4 151.92,80.12 131.2,124.08 88.8,124.08 78.08,80.12"/>
       <circle class="radar-dot" cx="115" cy="47.4" fill="#B8922A"/>
       <circle class="radar-dot" cx="151.92" cy="80.12" fill="#B8922A"/>
       <circle class="radar-dot" cx="131.2" cy="124.08" fill="#B8922A"/>
       <circle class="radar-dot" cx="88.8" cy="124.08" fill="#B8922A"/>
       <circle class="radar-dot" cx="78.08" cy="80.12" fill="#B8922A"/>
-<text class="radar-label" x="115" y="16">Problem Solving</text>
-      <text class="radar-label" x="183" y="65">Team Leadership</text>
-      <text class="radar-label" x="166" y="153">Workflow</text>
-      <text class="radar-label" x="64" y="153">Agility</text>
-      <text class="radar-label" x="43" y="65">Adaptability</text>
+      <!-- Labels -->
+      <text class="radar-label top" x="115" y="18">Problem Solving</text>
+      <text class="radar-label top-right" x="172" y="72">Team Leadership</text>
+      <text class="radar-label bottom-right" x="155" y="148">Workflow</text>
+      <text class="radar-label bottom-left" x="75" y="148">Agility</text>
+      <text class="radar-label top-left" x="58" y="72">Adaptability</text>
     </svg>
   </div>
 </div>
@@ -365,29 +377,31 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   <div class="bottom-left">
     <div class="sec-label">// 003 · Experience Profile</div>
     <div class="sec-title">Experience Profile</div>
-    <div class="donut-section">
-      <div class="donut-wrap">
-        <div class="donut-ring"></div>
-        <div class="donut-center"><div class="donut-center-num">10+</div><div class="donut-center-lbl">Years</div></div>
+      <div class="donut-spacer">
+        <div class="donut-section">
+          <div class="donut-wrap">
+            <div class="donut-ring"></div>
+            <div class="donut-center"><div class="donut-center-num">10+</div><div class="donut-center-lbl">Years</div></div>
+          </div>
+          <div class="icon-grid">
+            <div class="icon-row">
+              <div class="icon-box hospo"><svg viewBox="0 0 24 24"><path d="M20 3H4l8 9.46V19H8v2h8v-2h-4v-6.54L20 3zm-4.27 2L12 9.98 8.27 5h7.46z"/></svg></div>
+              <div class="icon-info"><div class="icon-domain">Gastronomy</div><div class="icon-sub">10 yrs · 3 cities · 6 stations</div></div>
+              <div class="icon-pct hospo">65%</div>
+            </div>
+            <div class="icon-row">
+              <div class="icon-box data"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+              <div class="icon-info"><div class="icon-domain">Data Analytics</div><div class="icon-sub">Ongoing · DataCraft · DataCamp</div></div>
+              <div class="icon-pct data">20%</div>
+            </div>
+            <div class="icon-row">
+              <div class="icon-box lang"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div>
+              <div class="icon-info"><div class="icon-domain">Languages & Culture</div><div class="icon-sub">ES - Native · EN - C2 · DE - B2 · (JP)</div></div>
+              <div class="icon-pct lang">15%</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="icon-grid">
-        <div class="icon-row">
-          <div class="icon-box hospo"><svg viewBox="0 0 24 24"><path d="M20 3H4l8 9.46V19H8v2h8v-2h-4v-6.54L20 3zm-4.27 2L12 9.98 8.27 5h7.46z"/></svg></div>
-          <div class="icon-info"><div class="icon-domain">Gastronomy</div><div class="icon-sub">10 yrs · 3 cities · 6 stations</div></div>
-          <div class="icon-pct hospo">65%</div>
-        </div>
-        <div class="icon-row">
-          <div class="icon-box data"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
-          <div class="icon-info"><div class="icon-domain">Data Analytics</div><div class="icon-sub">Ongoing · DataCraft · DataCamp</div></div>
-          <div class="icon-pct data">20%</div>
-        </div>
-        <div class="icon-row">
-          <div class="icon-box lang"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div>
-          <div class="icon-info"><div class="icon-domain">Languages & Culture</div><div class="icon-sub">ES - Native · EN - C2 · DE - B2 · (JP)</div></div>
-          <div class="icon-pct lang">15%</div>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="bottom-right">
     <div class="sec-label">// 004 · Education & Certificates</div>
@@ -401,7 +415,7 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   </div>
 </div>
 
-<!-- // 005 Karriere-Timeline -->
+<!-- // 005 Karriere-Timeline — LOLLIPOP DESIGN — expanded to 2026 -->
 <div class="timeline-strip">
   <div class="timeline-header">
     <div class="sec-label">// 005 · Career Timeline</div>
@@ -413,65 +427,101 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   </div>
   <div class="timeline-chart">
     <div class="timeline-axis"></div>
-    <div class="timeline-year" style="left:24px;">2013</div>
-    <div class="timeline-year" style="left:82px;">2014</div>
-    <div class="timeline-year" style="left:139px;">2015</div>
-    <div class="timeline-year" style="left:197px;">2016</div>
-    <div class="timeline-year" style="left:254px;">2017</div>
-    <div class="timeline-year" style="left:312px;">2018</div>
-    <div class="timeline-year" style="left:369px;">2019</div>
-    <div class="timeline-year" style="left:427px;">2020</div>
-    <div class="timeline-year" style="left:484px;">2021</div>
-    <div class="timeline-year" style="left:542px;">2022</div>
-    <div class="timeline-year" style="left:599px;">2023</div>
-    <div class="timeline-year" style="left:657px;">2024</div>
-    <div class="timeline-year" style="left:714px;">2025</div>
-    <div class="timeline-role top" style="left:48px;color:#B8922A;">
+    <!-- Year markers and ticks — strictly synced to 48px gap (4px/month) -->
+    <div class="timeline-tick" style="left:24px;"></div><div class="timeline-year" style="left:24px;">2013</div>
+    <div class="timeline-tick" style="left:72px;"></div><div class="timeline-year" style="left:72px;">2014</div>
+    <div class="timeline-tick" style="left:120px;"></div><div class="timeline-year" style="left:120px;">2015</div>
+    <div class="timeline-tick" style="left:168px;"></div><div class="timeline-year" style="left:168px;">2016</div>
+    <div class="timeline-tick" style="left:216px;"></div><div class="timeline-year" style="left:216px;">2017</div>
+    <div class="timeline-tick" style="left:264px;"></div><div class="timeline-year" style="left:264px;">2018</div>
+    <div class="timeline-tick" style="left:312px;"></div><div class="timeline-year" style="left:312px;">2019</div>
+    <div class="timeline-tick" style="left:360px;"></div><div class="timeline-year" style="left:360px;">2020</div>
+    <div class="timeline-tick" style="left:408px;"></div><div class="timeline-year" style="left:408px;">2021</div>
+    <div class="timeline-tick" style="left:456px;"></div><div class="timeline-year" style="left:456px;">2022</div>
+    <div class="timeline-tick" style="left:504px;"></div><div class="timeline-year" style="left:504px;">2023</div>
+    <div class="timeline-tick" style="left:552px;"></div><div class="timeline-year" style="left:552px;">2024</div>
+    <div class="timeline-tick" style="left:600px;"></div><div class="timeline-year" style="left:600px;">2025</div>
+    <div class="timeline-tick" style="left:648px;"></div><div class="timeline-year" style="left:648px;">2026</div>
+    <div class="timeline-tick" style="left:696px;"></div><div class="timeline-year" style="left:696px;">2027</div>
+    <!-- Month markers: 1px line every 4px -->
+    <div style="position:absolute;left:24px;right:24px;top:50%;height:1px;width:calc(100% - 48px);background:repeating-linear-gradient(90deg, var(--light-gray) 0px, var(--light-gray) 1px, transparent 1px, transparent 4px);pointer-events:none;z-index:1;transform:translateY(-50%);"></div>
+
+    <div class="timeline-role top" style="left:44px;color:#B8922A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#B8922A;">Casa Negra</div><div class="tl-label-sub">Barback → Bartender</div></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#B8922A;"></div><div class="tl-bar" style="width:69px;background:#B8922A;"></div></div>
-      <div class="tl-stem"></div>
+      <div class="tl-bar" style="width:72px;background:#B8922A;"></div>
+      <div class="tl-dot" style="background:#B8922A;"></div>
+      <div class="tl-stem" style="height:45px;background:#B8922A;"></div>
     </div>
-    <div class="timeline-role bottom" style="left:139px;color:#7D1A1A;">
-      <div class="tl-stem"></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:41px;background:#7D1A1A;"></div></div>
+
+    <!-- Santa María — Jul 2015→May 2016, bottom, 11mo -->
+    <div class="timeline-role bottom" style="left:144px;color:#7D1A1A;">
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:40px;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Santa María</div><div class="tl-label-sub">Head Barkeeper</div></div>
     </div>
-    <div class="timeline-role top" style="left:223px;color:#7D1A1A;">
+
+    <!-- The Butcher — Jun 2016→Nov 2017, top, 17.5mo -->
+    <div class="timeline-role top" style="left:188px;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">The Butcher</div><div class="tl-label-sub">Head Bartender</div></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:66px;background:#7D1A1A;"></div></div>
-      <div class="tl-stem"></div>
+      <div class="tl-bar" style="width:68px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
-    <div class="timeline-role bottom" style="left:283px;color:#7D1A1A;">
-      <div class="tl-stem"></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:30px;background:#7D1A1A;"></div></div>
+
+    <!-- Hefner Bar — Jul 2017→Feb 2018, bottom, 8mo (concurrent with Butcher) -->
+    <div class="timeline-role bottom" style="left:240px;color:#7D1A1A;">
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:28px;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Hefner Bar</div><div class="tl-label-sub">Barkeeper</div></div>
     </div>
-    <div class="timeline-role top" style="left:324px;color:#7D1A1A;">
+
+    <!-- Monkey Bar — Mar 2018→Aug 2019, top, 17.5mo -->
+    <div class="timeline-role top" style="left:272px;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Monkey Bar</div><div class="tl-label-sub">Maître D'</div></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:65px;background:#7D1A1A;"></div></div>
-      <div class="tl-stem"></div>
+      <div class="tl-bar" style="width:68px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
-    <div class="timeline-role bottom" style="left:403px;color:#7D1A1A;">
-      <div class="tl-stem"></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:17px;background:#7D1A1A;"></div></div>
+
+    <!-- FREA — Aug 2019→Dec 2019, bottom, 4.5mo -->
+    <div class="timeline-role bottom" style="left:340px;color:#7D1A1A;">
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:16px;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">FREA</div><div class="tl-label-sub">Head Barkeeper</div></div>
     </div>
-    <div class="timeline-role bottom" style="left:432px;color:#7D1A1A;">
-      <div class="tl-stem"></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#7D1A1A;"></div><div class="tl-bar" style="width:161px;background:#7D1A1A;"></div></div>
+
+    <!-- Kink Bar — Feb 2020→Jul 2023, TOP, 42mo -->
+    <div class="timeline-role top" style="left:364px;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">Kink Bar</div><div class="tl-label-sub">Senior Bartender</div></div>
+      <div class="tl-bar" style="width:164px;background:#7D1A1A;"></div>
+      <div class="tl-dot" style="background:#7D1A1A;"></div>
+      <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
-    <div class="timeline-role top" style="left:692px;color:#2D5016;">
+
+    <!-- AI & Data Learning — Jan 2025→May 2026, TOP -->
+    <div class="timeline-role top" style="left:600px;color:#2D5016;">
+      <div class="tl-labels"><div class="tl-label-name" style="color:#2D5016;">AI & Data Learning</div><div class="tl-label-sub">Courses & AI Projects</div></div>
+      <div class="tl-bar" style="width:64px;background:#2D5016;"></div>
+      <div class="tl-dot" style="background:#2D5016;"></div>
+      <div class="tl-stem" style="height:45px;background:#2D5016;"></div>
+    </div>
+
+    <!-- DataCraft — Sep 2024→Aug 2025, BOTTOM -->
+    <div class="timeline-role bottom" style="left:584px;color:#2D5016;">
+      <div class="tl-stem" style="height:45px;background:#2D5016;"></div>
+      <div class="tl-dot" style="background:#2D5016;"></div>
+      <div class="tl-bar" style="width:44px;background:#2D5016;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#2D5016;">DataCraft</div><div class="tl-label-sub">Data Analyst ↗</div></div>
-      <div class="tl-dot-bar"><div class="tl-dot" style="background:#2D5016;"></div><div class="tl-bar active" style="width:47px;background:#2D5016;"></div></div>
-      <div class="tl-stem"></div>
     </div>
   </div>
 </div>
 
 <div class="bottom-bar">
-  <div class="bottom-quote"></div>
-  <div class="bottom-mono"><a href="https://b-pingarron.github.io/Pingarron-Bernardo-Lebenslauf-Klassic/" target="_blank" style="color:inherit;text-decoration:none;">b-pingarron.github.io</a></div>
+  <div class="bottom-quote">"Ich übersetze komplexe Daten in handlungsrelevante Erkenntnisse."</div>
+  <div class="bottom-mono"><a href="https://github.com/B-Pingarron" target="_blank" style="color:inherit;text-decoration:none;">github.com/B-Pingarron</a></div>
 </div>
 </div>
 
