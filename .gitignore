@@ -1,10 +1,17 @@
-Clean/CONTEXT.md
-Clean/STATE.md
-CONTEXT.md
-Dashboard/components/STATE.md
-Dashboard/Graphics/STATE.md
-Dashboard/STATE.md
-Dashboard/versions/STATE.md
-Dashboard/versions/v1/STATE.md
-Images/STATE.md
-/archeology
+# Internal Dev Meta & Docs
+*.md
+.claude/
+.sisyphus/
+/archeology/
+
+# Experiments & Lab
+**/playground/
+
+# Python/Env
+.venv/
+**/__pycache__/
+*.ipynb
+
+# OS Files
+.DS_Store
+Thumbs.db

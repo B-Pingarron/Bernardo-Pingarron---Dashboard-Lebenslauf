@@ -1,0 +1,8 @@
+{
+  "name": "classic-cv",
+  "version": "1.0.0",
+  "description": "Classic CV with build-time translations",
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
