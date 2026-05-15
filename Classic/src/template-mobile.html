@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>{{meta_title}} · Mobile</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#1C1C1C;--dark:#3A3A3A;--mid:#6B6B6B;
+  --rule:#E5DDD9;--accent:#9A3E2A;
+}
+body{
+  font-family:'DM Sans',sans-serif;font-size:0.8125rem;line-height:1.5;
+  color:var(--dark);background:#fff;padding:0 1.25rem 2.5rem;overflow-x:hidden;
+}
+
+/* Header */
+.header{margin-bottom:10px;padding-bottom:4px;border-bottom:2px solid var(--accent);}
+.name{
+  font-family:'Cormorant Garamond',serif;font-size:1.625rem;font-weight:700;
+  color:var(--black);letter-spacing:-0.5px;line-height:1;margin-bottom:4px;
+}
+.title-line{font-size:0.75rem;font-weight:500;color:var(--accent);margin-bottom:4px;}
+.contact-row{
+  font-size:0.625rem;color:var(--mid);line-height:1.6;
+  display:flex;flex-wrap:wrap;gap:2px 8px;
+}
+.contact-row a{color:var(--mid);text-decoration:none;}
+
+/* Sections */
+.section{margin-bottom:12px;}
+.section-title{
+  font-family:'Cormorant Garamond',serif;font-size:0.9375rem;font-weight:600;
+  color:var(--accent);letter-spacing:0.5px;margin-bottom:4px;
+  padding-bottom:2px;border-bottom:0.5px solid var(--rule);
+}
+
+/* Profile */
+.profile-text{font-size:0.75rem;color:var(--dark);line-height:1.55;}
+
+/* Skills */
+.skill-row{display:flex;padding:3px 0;}
+.skill-row+.skill-row{border-top:0.5px solid var(--rule);}
+.skill-cat{font-weight:600;font-size:0.6875rem;color:var(--black);min-width:5.5rem;flex-shrink:0;padding-right:6px;}
+.skill-val{font-size:0.6875rem;color:var(--dark);}
+
+/* Experience */
+.role{margin-bottom:10px;}
+.role:last-child{margin-bottom:0;}
+.role-header{margin-bottom:1px;}
+.role-company{font-size:0.75rem;font-weight:600;color:var(--black);}
+.role-sub{font-size:0.625rem;color:var(--mid);font-weight:400;}
+.role-date{font-size:0.625rem;color:var(--mid);}
+.role-title{font-size:0.6875rem;font-weight:500;color:var(--accent);margin-bottom:2px;}
+.bullets{list-style:none;padding:0;margin:0;}
+.bullets li{
+  font-size:0.6875rem;color:var(--dark);line-height:1.45;
+  padding-left:12px;position:relative;margin-bottom:1px;
+}
+.bullets li::before{content:'\2013';position:absolute;left:1px;color:var(--accent);}
+
+/* Education */
+.edu-item{margin-bottom:6px;}
+.edu-item:last-child{margin-bottom:0;}
+.edu-inst{font-size:0.75rem;font-weight:600;color:var(--black);}
+.edu-sub{font-size:0.625rem;color:var(--mid);font-weight:400;}
+.edu-date{font-size:0.625rem;color:var(--mid);}
+.edu-degree{font-size:0.6875rem;font-weight:500;color:var(--accent);}
+.edu-detail{font-size:0.625rem;color:var(--mid);}
+
+/* Awards */
+.award-name{font-size:0.6875rem;color:var(--dark);}
+.award-sub{font-size:0.625rem;color:var(--mid);}
+.award-date{font-size:0.625rem;color:var(--mid);}
+
+/* Languages */
+.lang-row{font-size:0.6875rem;color:var(--dark);display:flex;gap:16px;flex-wrap:wrap;}
+.lang-entry{white-space:nowrap;}
+.lang-name{font-weight:600;color:var(--black);}
+.lang-level{color:var(--mid);font-weight:400;}
+
+/* Desktop link */
+.desktop-link{text-align:center;margin-top:1rem;font-family:'DM Sans',sans-serif;font-size:0.625rem;}
+.desktop-link a{color:var(--mid);text-decoration:none;border-bottom:1px dotted var(--rule);}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="name">{{name}}</div>
+  <div class="title-line">{{title}}</div>
+  <div class="contact-row">
+    <a href="mailto:b.pingarron.c@gmail.com">b.pingarron.c@gmail.com</a>
+    <a href="https://github.com/B-Pingarron" target="_blank">github.com/B-Pingarron</a>
+    <a href="https://b-pingarron.github.io/B-Pingarron-Dashboard-Lebenslauf/" target="_blank">{{link_dashboard}}</a>
+    {{location}}
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="section">
+  <div class="section-title">{{section_profile}}</div>
+  <div class="profile-text">{{profile_text}}</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">{{section_skills}}</div>
+  <div class="skill-row"><span class="skill-cat">{{skill_cat_1}}</span><span class="skill-val">{{skill_val_1}}</span></div>
+  <div class="skill-row"><span class="skill-cat">{{skill_cat_2}}</span><span class="skill-val">{{skill_val_2}}</span></div>
+  <div class="skill-row"><span class="skill-cat">{{skill_cat_3}}</span><span class="skill-val">{{skill_val_3}}</span></div>
+  <div class="skill-row"><span class="skill-cat">{{skill_cat_4}}</span><span class="skill-val">{{skill_val_4}}</span></div>
+  <div class="skill-row"><span class="skill-cat">{{skill_cat_5}}</span><span class="skill-val">{{skill_val_5}}</span></div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-title">{{section_experience}}</div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_1_company}}</div>
+      <div class="role-sub">{{role_1_sub}}</div>
+      <div class="role-date">{{role_1_date}}</div>
+    </div>
+    <div class="role-title">{{role_1_title}}</div>
+    <ul class="bullets">
+      <li>{{role_1_bullet_1}}</li>
+      <li>{{role_1_bullet_2}}</li>
+      <li>{{role_1_bullet_3}}</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_2_company}}</div>
+      <div class="role-sub">{{role_2_sub}}</div>
+      <div class="role-date">{{role_2_date}}</div>
+    </div>
+    <div class="role-title">{{role_2_title}}</div>
+    <ul class="bullets">
+      <li>{{role_2_bullet_1}}</li>
+      <li>{{role_2_bullet_2}}</li>
+      <li>{{role_2_bullet_3}}</li>
+      <li>{{role_2_bullet_4}}</li>
+      <li>{{role_2_bullet_5}}</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_3_company}}</div>
+      <div class="role-sub">{{role_3_sub}}</div>
+      <div class="role-date">{{role_3_date}}</div>
+    </div>
+    <div class="role-title">{{role_3_title}}</div>
+    <ul class="bullets">
+      <li>{{role_3_bullet_1}}</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_4_company}}</div>
+      <div class="role-sub">{{role_4_sub}}</div>
+      <div class="role-date">{{role_4_date}}</div>
+    </div>
+    <div class="role-title">{{role_4_title}}</div>
+    <ul class="bullets">
+      <li>{{role_4_bullet_1}}</li>
+      <li>{{role_4_bullet_2}}</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_5_company}}</div>
+      <div class="role-sub">{{role_5_sub}}</div>
+      <div class="role-date">{{role_5_date}}</div>
+    </div>
+    <div class="role-title">{{role_5_title}}</div>
+    <ul class="bullets">
+      <li>{{role_5_bullet_1}}</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <div class="role-company">{{role_6_company}}</div>
+      <div class="role-sub">{{role_6_sub}}</div>
+      <div class="role-date">{{role_6_date}}</div>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">{{section_education}}</div>
+  <div class="edu-item">
+    <div class="edu-inst">{{edu_1_institution}} <span class="edu-sub">{{edu_1_sub}}</span></div>
+    <div class="edu-date">{{edu_1_date}}</div>
+    <div class="edu-degree">{{edu_1_degree}}</div>
+    <div class="edu-detail">{{edu_1_detail}}</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-inst">{{edu_2_institution}}</div>
+    <div class="edu-date">{{edu_2_date}}</div>
+    <div class="edu-degree">{{edu_2_degree}}</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-inst">{{edu_3_institution}}</div>
+    <div class="edu-date">{{edu_3_date}}</div>
+    <div class="edu-degree">{{edu_3_degree}}</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-inst">{{edu_4_institution}}</div>
+    <div class="edu-date">{{edu_4_date}}</div>
+    <div class="edu-degree">{{edu_4_degree}}</div>
+  </div>
+</div>
+
+<!-- AWARDS -->
+<div class="section">
+  <div class="section-title">{{section_awards}}</div>
+  <div class="award-name">{{award_1_name}}</div>
+  <div class="award-sub">{{award_1_sub}}</div>
+  <div class="award-date">{{award_1_date}}</div>
+</div>
+
+<!-- LANGUAGES -->
+<div class="section">
+  <div class="section-title">{{section_languages}}</div>
+  <div class="lang-row">
+    <span class="lang-entry"><span class="lang-name">{{lang_1_name}}</span> <span class="lang-level">{{lang_1_level}}</span></span>
+    <span class="lang-entry"><span class="lang-name">{{lang_2_name}}</span> <span class="lang-level">{{lang_2_level}}</span></span>
+    <span class="lang-entry"><span class="lang-name">{{lang_3_name}}</span> <span class="lang-level">{{lang_3_level}}</span></span>
+  </div>
+</div>
+
+<div class="desktop-link"><a href="./classic_{{lang}}.html">Desktop Version (A4)</a></div>
+
+</body>
+</html>
