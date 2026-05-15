@@ -1,0 +1,5 @@
+# Repo-specific ignores (build artifacts, temp files)
+# Everything here is deployable - minimal ignores needed.
+node_modules/
+.DS_Store
+Thumbs.db
