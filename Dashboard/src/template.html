@@ -73,7 +73,7 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .pip-cols{display:flex;flex-direction:column;gap:4px;align-items:flex-start;margin-top:0;}
 .pip-col{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;flex:1;}
 .pip-col-name{font-family:'DM Mono',monospace;font-size:0.4375rem;color:var(--text-sub);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;}
-.pip-2x5{display:grid;grid-template-columns:repeat(10,0.5625rem);grid-template-rows:1fr;gap:4.25px;}
+.pip-2x5{display:grid;grid-template-columns:repeat(10,0.5625rem);grid-template-rows:1fr;gap:0.265rem;}
 .p{width:0.5625rem;height:0.5625rem;border-radius:1px;border:1.5px solid var(--cream-dark);background:transparent;}
 .p.cr{background:var(--crimson);border-color:var(--crimson);}
 .p.fo{background:var(--forest);border-color:var(--forest);}
@@ -163,21 +163,22 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
 .radar-svg .radar-label.top-left{text-anchor:end;dominant-baseline:middle;}
 
 /* Donut ring (CSS conic-gradient) */
-.donut-ring{width:6.625rem;height:6.625rem;border-radius:50%;background:conic-gradient(var(--gold) 0% 65%,var(--forest) 65% 85%,var(--crimson) 85% 100%);-webkit-mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);mask:radial-gradient(transparent 30px,#000 31px,#000 42px,transparent 43px);}
+.donut-ring{width:6.625rem;height:6.625rem;border-radius:50%;background:conic-gradient(var(--gold) 0% 65%,var(--forest) 65% 85%,var(--crimson) 85% 100%);-webkit-mask:radial-gradient(transparent 1.875rem,#000 1.9375rem,#000 2.625rem,transparent 2.6875rem);mask:radial-gradient(transparent 1.875rem,#000 1.9375rem,#000 2.625rem,transparent 2.6875rem);}
 
 /* Timeline chart (div-based lollipop) — stems FROM axis, dot at TIP, labels below bar */
 .timeline-chart{position:relative;height:12.5rem;margin-top:4px;}
 .timeline-axis{position:absolute;left:24px;right:24px;top:50%;height:2px;background:var(--cream-dark);transform:translateY(-50%);}
-.timeline-tick{position:absolute;width:1px;height:6px;background:var(--mid-gray);top:50%;transform:translateY(-50%);z-index:1;}
-.timeline-year{position:absolute;top:calc(50% + 12px);font:500 0.5rem "DM Mono",monospace;color:var(--mid-gray);text-align:left;}
+.timeline-tick{position:absolute;width:0.125rem;height:0.375rem;background:var(--mid-gray);top:50%;transform:translateY(-50%);z-index:1;}
+.timeline-year{position:absolute;top:calc(50% + 0.75rem);font:500 0.5rem "DM Mono",monospace;color:var(--mid-gray);text-align:left;}
+
 
 .timeline-role{position:absolute;display:flex;flex-direction:column;align-items:center;gap:2px;transform:translateX(-50%);}
 .timeline-role.top{bottom:50%;}
 .timeline-role.bottom{top:50%;}
 
-.tl-stem{width:2px;flex-shrink:0;opacity:0.6;align-self:center;}
-.tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;border:2px solid var(--cream);box-shadow:0 1px 3px rgba(0,0,0,0.2);align-self:center;}
-.tl-bar{height:3px;border-radius:2px;position:absolute;left:50%;}
+.tl-stem{width:0.125rem;flex-shrink:0;opacity:0.6;align-self:center;}
+.tl-dot{width:0.625rem;height:0.625rem;border-radius:50%;flex-shrink:0;border:2px solid var(--cream);box-shadow:0 1px 3px rgba(0,0,0,0.2);align-self:center;}
+.tl-bar{height:0.1875rem;border-radius:2px;position:absolute;left:50%;}
 .timeline-role.top .tl-bar{bottom:calc(50% + 8px);}
 .timeline-role.bottom .tl-bar{top:calc(50% + 8px);}
 
@@ -436,94 +437,103 @@ body{background:#B0A898;font-family:'DM Sans',sans-serif;display:flex;flex-direc
   <div class="timeline-chart">
     <div class="timeline-axis"></div>
     <!-- Year markers and ticks — strictly synced to 48px gap (4px/month) -->
-    <div class="timeline-tick" style="left:24px;"></div><div class="timeline-year" style="left:24px;">2013</div>
-    <div class="timeline-tick" style="left:72px;"></div><div class="timeline-year" style="left:72px;">2014</div>
-    <div class="timeline-tick" style="left:120px;"></div><div class="timeline-year" style="left:120px;">2015</div>
-    <div class="timeline-tick" style="left:168px;"></div><div class="timeline-year" style="left:168px;">2016</div>
-    <div class="timeline-tick" style="left:216px;"></div><div class="timeline-year" style="left:216px;">2017</div>
-    <div class="timeline-tick" style="left:264px;"></div><div class="timeline-year" style="left:264px;">2018</div>
-    <div class="timeline-tick" style="left:312px;"></div><div class="timeline-year" style="left:312px;">2019</div>
-    <div class="timeline-tick" style="left:360px;"></div><div class="timeline-year" style="left:360px;">2020</div>
-    <div class="timeline-tick" style="left:408px;"></div><div class="timeline-year" style="left:408px;">2021</div>
-    <div class="timeline-tick" style="left:456px;"></div><div class="timeline-year" style="left:456px;">2022</div>
-    <div class="timeline-tick" style="left:504px;"></div><div class="timeline-year" style="left:504px;">2023</div>
-    <div class="timeline-tick" style="left:552px;"></div><div class="timeline-year" style="left:552px;">2024</div>
-    <div class="timeline-tick" style="left:600px;"></div><div class="timeline-year" style="left:600px;">2025</div>
-    <div class="timeline-tick" style="left:648px;"></div><div class="timeline-year" style="left:648px;">2026</div>
-    <div class="timeline-tick" style="left:696px;"></div><div class="timeline-year" style="left:696px;">2027</div>
+    <div class="timeline-tick" style="left:1.5rem;"></div><div class="timeline-year" style="left:1.5rem;">2013</div>
+    <div class="timeline-tick" style="left:4.5rem;"></div><div class="timeline-year" style="left:4.5rem;">2014</div>
+    <div class="timeline-tick" style="left:7.5rem;"></div><div class="timeline-year" style="left:7.5rem;">2015</div>
+    <div class="timeline-tick" style="left:10.5rem;"></div><div class="timeline-year" style="left:10.5rem;">2016</div>
+    <div class="timeline-tick" style="left:13.5rem;"></div><div class="timeline-year" style="left:13.5rem;">2017</div>
+    <div class="timeline-tick" style="left:16.5rem;"></div><div class="timeline-year" style="left:16.5rem;">2018</div>
+    <div class="timeline-tick" style="left:19.5rem;"></div><div class="timeline-year" style="left:19.5rem;">2019</div>
+    <div class="timeline-tick" style="left:22.5rem;"></div><div class="timeline-year" style="left:22.5rem;">2020</div>
+    <div class="timeline-tick" style="left:25.5rem;"></div><div class="timeline-year" style="left:25.5rem;">2021</div>
+    <div class="timeline-tick" style="left:28.5rem;"></div><div class="timeline-year" style="left:28.5rem;">2022</div>
+    <div class="timeline-tick" style="left:31.5rem;"></div><div class="timeline-year" style="left:31.5rem;">2023</div>
+    <div class="timeline-tick" style="left:34.5rem;"></div><div class="timeline-year" style="left:34.5rem;">2024</div>
+    <div class="timeline-tick" style="left:37.5rem;"></div><div class="timeline-year" style="left:37.5rem;">2025</div>
+    <div class="timeline-tick" style="left:40.5rem;"></div><div class="timeline-year" style="left:40.5rem;">2026</div>
+    <div class="timeline-tick" style="left:43.5rem;"></div><div class="timeline-year" style="left:43.5rem;">2027</div>
     <!-- Month markers: 1px line every 4px -->
     <div style="position:absolute;left:24px;right:24px;top:50%;height:1px;width:calc(100% - 48px);background:repeating-linear-gradient(90deg, var(--light-gray) 0px, var(--light-gray) 1px, transparent 1px, transparent 4px);pointer-events:none;z-index:1;transform:translateY(-50%);"></div>
 
-    <div class="timeline-role top" style="left:44px;color:#B8922A;">
+    <div class="timeline-role top" style="left:2.75rem;color:#B8922A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#B8922A;">{{timeline_role_1_name}}</div><div class="tl-label-sub">{{timeline_role_1_sub}}</div></div>
-      <div class="tl-bar" style="width:72px;background:#B8922A;"></div>
+      <div class="tl-bar" style="width:4.5rem;background:#B8922A;"></div>
       <div class="tl-dot" style="background:#B8922A;"></div>
       <div class="tl-stem" style="height:45px;background:#B8922A;"></div>
     </div>
 
+
     <!-- Santa María — Jul 2015→May 2016, bottom, 11mo -->
-    <div class="timeline-role bottom" style="left:144px;color:#7D1A1A;">
+    <div class="timeline-role bottom" style="left:9rem;color:#7D1A1A;">
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
-      <div class="tl-bar" style="width:40px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:2.5rem;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_2_name}}</div><div class="tl-label-sub">{{timeline_role_2_sub}}</div></div>
     </div>
 
+
     <!-- The Butcher — Jun 2016→Nov 2017, top, 17.5mo -->
-    <div class="timeline-role top" style="left:188px;color:#7D1A1A;">
+    <div class="timeline-role top" style="left:11.75rem;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_3_name}}</div><div class="tl-label-sub">{{timeline_role_3_sub}}</div></div>
-      <div class="tl-bar" style="width:68px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:4.25rem;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
 
+
     <!-- Hefner Bar — Jul 2017→Feb 2018, bottom, 8mo (concurrent with Butcher) -->
-    <div class="timeline-role bottom" style="left:240px;color:#7D1A1A;">
+    <div class="timeline-role bottom" style="left:15rem;color:#7D1A1A;">
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
-      <div class="tl-bar" style="width:28px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:1.75rem;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_4_name}}</div><div class="tl-label-sub">{{timeline_role_4_sub}}</div></div>
     </div>
 
+
     <!-- Monkey Bar — Mar 2018→Aug 2019, top, 17.5mo -->
-    <div class="timeline-role top" style="left:272px;color:#7D1A1A;">
+    <div class="timeline-role top" style="left:17rem;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_5_name}}</div><div class="tl-label-sub">{{timeline_role_5_sub}}</div></div>
-      <div class="tl-bar" style="width:68px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:4.25rem;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
 
+
     <!-- FREA — Aug 2019→Dec 2019, bottom, 4.5mo -->
-    <div class="timeline-role bottom" style="left:340px;color:#7D1A1A;">
+    <div class="timeline-role bottom" style="left:21.25rem;color:#7D1A1A;">
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
-      <div class="tl-bar" style="width:16px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:1rem;background:#7D1A1A;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_6_name}}</div><div class="tl-label-sub">{{timeline_role_6_sub}}</div></div>
     </div>
 
+
     <!-- Kink Bar — Feb 2020→Jul 2023, TOP, 42mo -->
-    <div class="timeline-role top" style="left:364px;color:#7D1A1A;">
+    <div class="timeline-role top" style="left:22.75rem;color:#7D1A1A;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#7D1A1A;">{{timeline_role_7_name}}</div><div class="tl-label-sub">{{timeline_role_7_sub}}</div></div>
-      <div class="tl-bar" style="width:164px;background:#7D1A1A;"></div>
+      <div class="tl-bar" style="width:10.25rem;background:#7D1A1A;"></div>
       <div class="tl-dot" style="background:#7D1A1A;"></div>
       <div class="tl-stem" style="height:45px;background:#7D1A1A;"></div>
     </div>
 
+
     <!-- AI & Data Learning — Jan 2025→May 2026, TOP -->
-    <div class="timeline-role top" style="left:600px;color:#2D5016;">
+    <div class="timeline-role top" style="left:37.5rem;color:#2D5016;">
       <div class="tl-labels"><div class="tl-label-name" style="color:#2D5016;">AI & Data Learning</div><div class="tl-label-sub">Courses & AI Projects</div></div>
-      <div class="tl-bar" style="width:64px;background:#2D5016;"></div>
+      <div class="tl-bar" style="width:4rem;background:#2D5016;"></div>
       <div class="tl-dot" style="background:#2D5016;"></div>
       <div class="tl-stem" style="height:45px;background:#2D5016;"></div>
     </div>
 
+
     <!-- DataCraft — Sep 2024→Aug 2025, BOTTOM -->
-    <div class="timeline-role bottom" style="left:584px;color:#2D5016;">
+    <div class="timeline-role bottom" style="left:36.5rem;color:#2D5016;">
       <div class="tl-stem" style="height:45px;background:#2D5016;"></div>
       <div class="tl-dot" style="background:#2D5016;"></div>
-      <div class="tl-bar" style="width:44px;background:#2D5016;"></div>
+      <div class="tl-bar" style="width:2.75rem;background:#2D5016;"></div>
       <div class="tl-labels"><div class="tl-label-name" style="color:#2D5016;">{{timeline_role_8_name}}</div><div class="tl-label-sub">{{timeline_role_8_sub}}</div></div>
     </div>
+
   </div>
 </div>
 
